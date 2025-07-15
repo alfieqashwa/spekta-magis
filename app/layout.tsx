@@ -13,8 +13,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Spekta Magis",
+  title: {
+    template: "%s | Spekta Magis",
+    default: "Spekta Magis",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   description: "Music Promotion Company",
+  icons: [
+    {
+      rel: "icon",
+      url: "/logo.png",
+      type: "image/x-icon",
+    },
+  ],
 };
 
 export default function RootLayout({
