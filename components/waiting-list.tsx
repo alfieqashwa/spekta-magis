@@ -45,7 +45,7 @@ export default function WaitlistPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="mb-12 mt-2 text-muted-foreground sm:text-lg"
+          className="mb-12 mt-2 text-muted-foreground sm:text-lg font-medium"
         >
           Join the future of live music experiences.
           <br className="hidden sm:block" /> Create unforgettable shows powered
