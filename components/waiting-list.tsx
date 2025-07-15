@@ -1,16 +1,24 @@
 "use client";
 
-import { Particles } from "@/components/ui/particles";
 import { Spotlight } from "@/components/ui/spotlight";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import { Bricolage_Grotesque } from "next/font/google";
 import CountdownTimer from "./countdown-timer";
 import { Footer } from "./footer";
+import dynamic from "next/dynamic";
+import { ParticlesProps } from "../components/ui/particles";
+import Image from "next/image";
 
 const brico = Bricolage_Grotesque({
   subsets: ["latin"],
 });
+const Particles = dynamic<ParticlesProps>(
+  () => import("../components/ui/particles").then((mod) => mod.Particles),
+  {
+    ssr: false,
+  }
+);
 
 export default function WaitlistPage() {
   return (
@@ -19,8 +27,8 @@ export default function WaitlistPage() {
 
       <Particles
         className="absolute inset-0 z-0"
-        quantity={100}
-        ease={80}
+        quantity={150}
+        ease={8}
         refresh
         color="#e60a64"
       />
@@ -31,12 +39,13 @@ export default function WaitlistPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
           className={cn(
-            "mb-4 cursor-crosshair bg-gradient-to-b from-foreground via-foreground/80 to-foreground/40 bg-clip-text text-4xl font-bold text-transparent sm:text-7xl",
+            "mb-4 cursor-crosshair bg-gradient-to-b from-foreground flex space-x-4 via-foreground/80 to-foreground/40 bg-clip-text text-4xl font-bold text-transparent sm:text-7xl",
             brico.className
           )}
         >
-          Spekta{" "}
-          <span className="bg-primary from-foreground via-rose-700 to-primary bg-clip-text text-transparent bg-gradient-to-br">
+          <span>Spekta</span>
+          <Image src="/logo.png" alt="Spekta Magis" width={60} height={60} />
+          <span className="from-rose-700 via-fuchsia-700 to-amber-500 bg-clip-text text-transparent bg-gradient-to-r">
             Magis
           </span>
         </motion.h1>
