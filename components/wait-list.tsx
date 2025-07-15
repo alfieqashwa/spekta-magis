@@ -3,12 +3,12 @@
 import { Spotlight } from "@/components/ui/spotlight";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
+import dynamic from "next/dynamic";
 import { Bricolage_Grotesque } from "next/font/google";
+import Image from "next/image";
 import CountdownTimer from "./countdown-timer";
 import { Footer } from "./footer";
-import dynamic from "next/dynamic";
 import { ParticlesProps } from "./ui/particles";
-import Image from "next/image";
 
 const brico = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -44,7 +44,12 @@ export default function WaitlistPage() {
           )}
         >
           <span>Spekta</span>
-          <span className="inline-block w-10 h-10 sm:w-16 sm:h-16 relative">
+          <motion.span
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="inline-block w-10 h-10 sm:w-16 sm:h-16 relative"
+          >
             <Image
               src="/logo.png"
               alt="Spekta Magis Logo"
@@ -53,7 +58,7 @@ export default function WaitlistPage() {
               priority
               style={{ objectFit: "contain" }}
             />
-          </span>
+          </motion.span>
           <span className="from-rose-700 via-fuchsia-700 to-amber-500 bg-clip-text text-transparent bg-gradient-to-r">
             Magis
           </span>

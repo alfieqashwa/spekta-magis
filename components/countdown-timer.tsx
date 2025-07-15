@@ -73,7 +73,7 @@ const CountdownCard = ({
     initial={{ opacity: 0, scale: "70%" }}
     animate={{ opacity: 1, scale: "100%" }}
     transition={{ duration: 1, delay: 0.7 }}
-    className="flex flex-col items-center justify-center rounded-xl border border-primary/10 bg-white/5 p-4 backdrop-blur-md transform-gpu glass [box-shadow:0_-20px_80px_-20px_#ff7aa42f_inset]"
+    className="flex flex-col items-center justify-center rounded-lg shadow-lg border border-primary/10 bg-white/5 p-4 backdrop-blur-md transform-gpu glass [box-shadow:0_-20px_80px_-20px_#ff7aa42f_inset]"
   >
     <div className="text-3xl text-rose-500 font-mono">{context}</div>
     <div className="text-sm uppercase text-muted-foreground">{title}</div>
