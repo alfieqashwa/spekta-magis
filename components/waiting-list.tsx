@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import { Bricolage_Grotesque } from "next/font/google";
 import CountdownTimer from "./countdown-timer";
+import { Footer } from "./footer";
 
 const brico = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -31,7 +32,7 @@ export default function WaitlistPage() {
           transition={{ duration: 1, delay: 0.2 }}
           className={cn(
             "mb-4 cursor-crosshair bg-gradient-to-b from-foreground via-foreground/80 to-foreground/40 bg-clip-text text-4xl font-bold text-transparent sm:text-7xl",
-            brico.className,
+            brico.className
           )}
         >
           Spekta{" "}
@@ -54,6 +55,7 @@ export default function WaitlistPage() {
 
         <CountdownTimer />
       </div>
+      <Footer />
 
       <style jsx global>{`
         @keyframes float {
