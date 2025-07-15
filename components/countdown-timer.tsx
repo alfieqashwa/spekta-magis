@@ -52,7 +52,7 @@ export default function CountdownTimer() {
         transition={{ duration: 1, delay: 0.7 }}
         className="mb-4 font-semibold text-center"
       >
-        <h1 className="text-lg">20 September 2025</h1>
+        <h1 className="text-lg">Saturday, 20 September 2025</h1>
         <h1 className="text-muted-foreground">
           Kalawa Convention Hall, Palangka Raya
         </h1>
