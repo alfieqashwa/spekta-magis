@@ -1,10 +1,9 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import Countdown, { CountdownRendererFn } from "react-countdown";
-import { Button } from "@/components/ui/button";
-import { parse } from "date-fns";
-import { motion } from "motion/react";
 
 const targetDate = new Date("2025-09-20T09:00:00Z"); // UTC time of 16:00 in GMT+7
 
