@@ -43,7 +43,7 @@ export default function CountdownTimer() {
   };
 
   return (
-    <div className="dark:text-white p-6 rounded-lg shadow-lg">
+    <div className="dark:text-white p-6 rounded-lg shadow-lg mt-2 ">
       <motion.article
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

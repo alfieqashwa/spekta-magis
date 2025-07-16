@@ -10,6 +10,7 @@ import CountdownTimer from "./countdown-timer";
 import { Footer } from "./footer";
 import { ParticlesProps } from "./ui/particles";
 import { LogoSpektamagis } from "./logo-spektamagis";
+import RippleWaveLoader from "./ui/ripplewave-loader";
 
 const brico = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -62,6 +63,7 @@ export default function WaitlistPage() {
           moments of wonder.
         </motion.p>
 
+        <RippleWaveLoader />
         <CountdownTimer />
       </div>
       <Footer />
