@@ -28,7 +28,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  description: "Music Promotion Company",
+  description:
+    "A spectacular performance where light, technology, and music come together to craft moments of wonder and delight.",
   icons: [
     {
       rel: "icon",

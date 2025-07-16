@@ -17,7 +17,7 @@ const Particles = dynamic<ParticlesProps>(
   () => import("./ui/particles").then((mod) => mod.Particles),
   {
     ssr: false,
-  }
+  },
 );
 
 export default function WaitlistPage() {
@@ -40,7 +40,7 @@ export default function WaitlistPage() {
           transition={{ duration: 1, delay: 0.2 }}
           className={cn(
             "mb-4 cursor-crosshair bg-gradient-to-b from-foreground flex justify-center space-x-4 via-foreground/80 to-foreground/40 bg-clip-text text-4xl font-bold text-transparent sm:text-7xl",
-            brico.className
+            brico.className,
           )}
         >
           <span>Spekta</span>
@@ -71,9 +71,8 @@ export default function WaitlistPage() {
           transition={{ duration: 1, delay: 0.5 }}
           className="mb-12 mt-2 text-muted-foreground sm:text-lg font-medium"
         >
-          Join the future of live music experiences.
-          <br className="hidden sm:block" /> Create unforgettable shows powered
-          by breakthrough tech.
+          A spectacular fusion of light, technology, and music — crafting
+          moments of wonder.
         </motion.p>
 
         <CountdownTimer />
