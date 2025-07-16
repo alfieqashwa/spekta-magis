@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Countdown, { CountdownRendererFn } from "react-countdown";
 import { Button } from "@/components/ui/button";
 import { parse } from "date-fns";
@@ -9,6 +9,12 @@ import { motion } from "motion/react";
 const targetDate = new Date("2025-09-20T09:00:00Z"); // UTC time of 16:00 in GMT+7
 
 export default function CountdownTimer() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const renderer: CountdownRendererFn = ({
     days,
     hours,
@@ -52,7 +58,8 @@ export default function CountdownTimer() {
           <span className="whitespace-nowrap">Palangka Raya</span>
         </h1>
       </motion.article>
-      <Countdown date={targetDate} renderer={renderer} />
+      {/* Only render countdown after client has mounted */}
+      {isClient && <Countdown date={targetDate} renderer={renderer} />}
     </div>
   );
 }
