@@ -35,7 +35,7 @@ export const Footer = () => (
 );
 
 const Copyright = () => (
-  <p className="text-xs md:text-sm font-semibold my-2 text-muted-foreground font-mono">
+  <p className="text-xs md:text-sm font-semibold text-center mt-2 mb-1 text-muted-foreground font-mono">
     &copy; {new Date().getFullYear()} Spektamagis. All rights reserved.
   </p>
 );
