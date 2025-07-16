@@ -2,8 +2,8 @@ import { CONTACT, INSTAGRAM } from "@/constants/contact";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export const Footer = () => (
-  <div className="absolute bottom-0 z-10">
-    <div className="flex gap-4 justify-end items-center p-4">
+  <footer className="absolute bottom-0 z-10">
+    <div className="flex space-x-4 justify-end items-center px-4">
       <section>
         <a
           href={INSTAGRAM}
@@ -15,7 +15,7 @@ export const Footer = () => (
           <span className="text-xs md:text-sm font-medium">Spektamagis</span>
         </a>
       </section>
-      <a className="text-gray-300">|</a>
+      <a className="text-gray-300 font-semibold">|</a>
       <section>
         <a
           href={CONTACT}
@@ -30,5 +30,12 @@ export const Footer = () => (
         </a>
       </section>
     </div>
-  </div>
+    <Copyright />
+  </footer>
+);
+
+const Copyright = () => (
+  <p className="text-xs md:text-sm font-semibold my-2 text-muted-foreground font-mono">
+    &copy; {new Date().getFullYear()} Spektamagis. All rights reserved.
+  </p>
 );
