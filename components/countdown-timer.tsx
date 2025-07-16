@@ -46,9 +46,10 @@ export default function CountdownTimer() {
         className="mb-4 font-semibold text-center"
       >
         <h1 className="text-base md:text-lg">Saturday, 20 September 2025</h1>
-        <h1 className="text-sm md:text-base text-muted-foreground">
+        <h1 className="text-sm md:text-base text-muted-foreground whitespace-nowrap">
           Kalawa Convention Hall,
-          <br /> Palangka Raya
+          <br className="md:hidden" />{" "}
+          <span className="whitespace-nowrap">Palangka Raya</span>
         </h1>
       </motion.article>
       <Countdown date={targetDate} renderer={renderer} />
