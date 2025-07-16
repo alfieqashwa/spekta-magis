@@ -9,6 +9,7 @@ import Image from "next/image";
 import CountdownTimer from "./countdown-timer";
 import { Footer } from "./footer";
 import { ParticlesProps } from "./ui/particles";
+import { LogoSpektamagis } from "./logo-spektamagis";
 
 const brico = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -17,7 +18,7 @@ const Particles = dynamic<ParticlesProps>(
   () => import("./ui/particles").then((mod) => mod.Particles),
   {
     ssr: false,
-  },
+  }
 );
 
 export default function WaitlistPage() {
@@ -40,25 +41,11 @@ export default function WaitlistPage() {
           transition={{ duration: 1, delay: 0.2 }}
           className={cn(
             "mb-4 cursor-crosshair bg-gradient-to-b from-foreground flex justify-center space-x-4 via-foreground/80 to-foreground/40 bg-clip-text text-4xl font-bold text-transparent sm:text-7xl",
-            brico.className,
+            brico.className
           )}
         >
           <span>Spekta</span>
-          <motion.span
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="inline-block w-10 h-10 sm:w-16 sm:h-16 relative"
-          >
-            <Image
-              src="/logo.png"
-              alt="Spekta Magis Logo"
-              fill
-              sizes="100%"
-              priority
-              style={{ objectFit: "contain" }}
-            />
-          </motion.span>
+          <LogoSpektamagis />
           <span className="from-rose-700 via-fuchsia-700 to-amber-500 bg-clip-text text-transparent bg-gradient-to-r">
             Magis
           </span>
