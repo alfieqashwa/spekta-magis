@@ -6,16 +6,9 @@ import { Button } from "@/components/ui/button";
 import { parse } from "date-fns";
 import { motion } from "motion/react";
 
-const getEventDate = () => {
-  // Local date in UTC+07:00, convert to UTC by subtracting 7 hours
-  const localDate = parse("2025-09-20 16:00", "yyyy-MM-dd HH:mm", new Date());
-  const utcDate = new Date(localDate.getTime() - 7 * 60 * 60 * 1000);
-  return utcDate;
-};
+const targetDate = new Date("2025-09-20T09:00:00Z"); // UTC time of 16:00 in GMT+7
 
 export default function CountdownTimer() {
-  const [targetDate] = useState<Date>(getEventDate());
-
   const renderer: CountdownRendererFn = ({
     days,
     hours,
