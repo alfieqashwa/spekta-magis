@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 
 const getEventDate = () => {
   // Local date in UTC+07:00, convert to UTC by subtracting 7 hours
-  const localDate = parse("2025-09-20 18:00", "yyyy-MM-dd HH:mm", new Date());
+  const localDate = parse("2025-09-20 16:00", "yyyy-MM-dd HH:mm", new Date());
   const utcDate = new Date(localDate.getTime() - 7 * 60 * 60 * 1000);
   return utcDate;
 };
@@ -52,9 +52,10 @@ export default function CountdownTimer() {
         transition={{ duration: 1, delay: 0.7 }}
         className="mb-4 font-semibold text-center"
       >
-        <h1 className="text-lg">Saturday, 20 September 2025</h1>
-        <h1 className="text-muted-foreground">
-          Kalawa Convention Hall, Palangka Raya
+        <h1 className="text-base md:text-lg">Saturday, 20 September 2025</h1>
+        <h1 className="text-sm md:text-base text-muted-foreground">
+          Kalawa Convention Hall,
+          <br /> Palangka Raya
         </h1>
       </motion.article>
       <Countdown date={targetDate} renderer={renderer} />

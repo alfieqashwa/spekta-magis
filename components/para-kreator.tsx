@@ -13,6 +13,7 @@ export function ParaKreator() {
           src="/para-kreator.png"
           width={100}
           height={100}
+          priority
           alt="Para Creator"
         />
       </div>
@@ -25,6 +26,7 @@ export function ParaKreator() {
         src="/para-kreator.png"
         width={80}
         height={80}
+        priority
         alt="Para Creator"
       />
     </div>

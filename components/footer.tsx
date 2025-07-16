@@ -24,7 +24,7 @@ export const Footer = () => (
           className="flex items-center space-x-2"
         >
           <FaWhatsapp className="text-[#EB2D2E] animate-pulse-slow size-6" />
-          <span className="text-xs md:text-sm font-medium">
+          <span className="text-xs md:text-sm font-medium whitespace-nowrap">
             0852 85 999 565
           </span>
         </a>
@@ -35,7 +35,7 @@ export const Footer = () => (
 );
 
 const Copyright = () => (
-  <p className="text-xs md:text-sm font-semibold text-center mt-2 mb-1 text-muted-foreground font-mono">
+  <p className="text-xs md:text-sm font-semibold text-center mt-2 mb-1 text-muted-foreground font-mono whitespace-nowrap">
     &copy; {new Date().getFullYear()} Spektamagis. All rights reserved.
   </p>
 );
