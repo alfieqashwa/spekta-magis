@@ -4,13 +4,18 @@ import { Spotlight } from "@/components/ui/spotlight";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
+
 import { Bricolage_Grotesque } from "next/font/google";
 import Image from "next/image";
 import CountdownTimer from "./countdown-timer";
 import { Footer } from "./footer";
 import { ParticlesProps } from "./ui/particles";
-import { LogoSpektamagis } from "./logo-spektamagis";
 import RippleWaveLoader from "./ui/ripplewave-loader";
+import localFont from "next/font/local";
+
+const maragsa = localFont({
+  src: "../public/fonts/Maragsa-Display.woff2",
+});
 
 const brico = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -19,7 +24,7 @@ const Particles = dynamic<ParticlesProps>(
   () => import("./ui/particles").then((mod) => mod.Particles),
   {
     ssr: false,
-  }
+  },
 );
 
 export default function WaitlistPage() {
@@ -41,15 +46,11 @@ export default function WaitlistPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
           className={cn(
-            "mb-4 cursor-crosshair bg-gradient-to-b from-foreground flex justify-center space-x-4 via-foreground/80 to-foreground/40 bg-clip-text text-4xl font-bold text-transparent sm:text-7xl",
-            brico.className
+            "from-foreground via-foreground/80 to-foreground/40 mb-4 flex cursor-crosshair justify-center space-x-4 bg-gradient-to-b bg-clip-text text-4xl font-bold tracking-widest text-transparent sm:text-5xl md:text-7xl",
+            maragsa.className,
           )}
         >
-          <span>Spekta</span>
-          <LogoSpektamagis />
-          <span className="from-rose-700 via-fuchsia-700 to-amber-500 bg-clip-text text-transparent bg-gradient-to-r">
-            Magis
-          </span>
+          SPEKTAMAGIS
         </motion.h1>
 
         {/* Subtitle */}
@@ -57,7 +58,7 @@ export default function WaitlistPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="mb-12 mt-2 text-muted-foreground sm:text-lg font-medium"
+          className="text-muted-foreground mt-2 mb-12 font-medium sm:text-lg"
         >
           A spectacular fusion of light, technology, and music — crafting
           moments of wonder.
