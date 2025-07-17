@@ -6,31 +6,33 @@ import {
   MobileNavMenu,
   MobileNavToggle,
   Navbar,
-  NavbarButton,
   NavbarLogo,
   NavBody,
   NavItems,
 } from "@/components/ui/resizable-navbar";
-import { redirect } from "next/navigation";
 import { useState } from "react";
 
 export function NavbarSpekta() {
   const navItems = [
     {
-      name: "Docs",
-      link: "/docs/introduction",
-    },
-    {
       name: "About",
-      link: "/about",
+      link: "/",
     },
     {
-      name: "Features",
-      link: "/#features",
+      name: "Line Up",
+      link: "/",
     },
     {
-      name: "Showcase",
-      link: "/showcase",
+      name: "Ticket",
+      link: "/",
+    },
+    {
+      name: "Merchandise",
+      link: "/",
+    },
+    {
+      name: "AI",
+      link: "/",
     },
   ];
 
@@ -64,22 +66,11 @@ export function NavbarSpekta() {
               key={`mobile-link-${idx}`}
               href={item.link}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="relative text-neutral-600 dark:text-neutral-300"
+              className="relative text-neutral-300"
             >
               <span className="block">{item.name}</span>
             </a>
           ))}
-          <div className="flex w-full flex-col gap-4">
-            <NavbarButton
-              variant="gradient"
-              className="w-full"
-              onClick={() =>
-                redirect("https://github.com/subhadeeproy3902/mvpblocks")
-              }
-            >
-              Github
-            </NavbarButton>
-          </div>
         </MobileNavMenu>
       </MobileNav>
     </Navbar>

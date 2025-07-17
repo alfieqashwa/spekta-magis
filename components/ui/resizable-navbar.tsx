@@ -244,7 +244,7 @@ export const NavbarLogo = () => {
       <img src="/logo.png" alt="logo" className="h-8 w-7" />
       <span
         className={cn(
-          "bg-gradient-to-br from-rose-600 from-30% via-fuchsia-600 via-50% to-orange-500 to-70% bg-clip-text text-xl font-semibold tracking-wider text-transparent",
+          "bg-gradient-to-br from-rose-600 from-30% via-fuchsia-600 via-50% to-orange-500 to-70% bg-clip-text text-xl font-semibold tracking-widest text-transparent",
           maragsa.className,
         )}
       >
