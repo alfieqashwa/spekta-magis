@@ -6,6 +6,7 @@ export default function Home() {
     <div className="relative">
       <ParaKreator />
       <Waitlist />
+      <div className="mt-96"></div>
     </div>
   );
 }

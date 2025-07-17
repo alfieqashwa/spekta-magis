@@ -10,7 +10,13 @@ import {
   NavBody,
   NavItems,
 } from "@/components/ui/resizable-navbar";
+import { cn } from "@/lib/utils";
+import localFont from "next/font/local";
 import { useState } from "react";
+
+const magurie = localFont({
+  src: "../public/fonts/Magurie.woff2",
+});
 
 export function NavbarSpekta() {
   const navItems = [
@@ -68,7 +74,14 @@ export function NavbarSpekta() {
               onClick={() => setIsMobileMenuOpen(false)}
               className="relative text-[#EB2D2E]"
             >
-              <span className="block">{item.name}</span>
+              <span
+                className={cn(
+                  "block text-lg tracking-widest",
+                  magurie.className,
+                )}
+              >
+                {item.name}
+              </span>
             </a>
           ))}
         </MobileNavMenu>

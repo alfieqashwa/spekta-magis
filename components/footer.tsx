@@ -2,8 +2,8 @@ import { CONTACT, INSTAGRAM } from "@/constants/contact";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export const Footer = () => (
-  <footer className="absolute bottom-0 z-10">
-    <div className="flex items-center justify-end space-x-4 px-4">
+  <footer className="fixed bottom-0 z-10 w-full">
+    <div className="flex items-center justify-center space-x-4 px-4">
       <section>
         <a
           href={INSTAGRAM}

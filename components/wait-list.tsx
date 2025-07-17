@@ -6,7 +6,6 @@ import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 import localFont from "next/font/local";
 import CountdownTimer from "./countdown-timer";
-import { Footer } from "./footer";
 import { ParticlesProps } from "./ui/particles";
 import RippleWaveLoader from "./ui/ripplewave-loader";
 
@@ -64,7 +63,6 @@ export default function WaitlistPage() {
         <RippleWaveLoader />
         <CountdownTimer />
       </div>
-      <Footer />
 
       <style jsx global>{`
         @keyframes float {

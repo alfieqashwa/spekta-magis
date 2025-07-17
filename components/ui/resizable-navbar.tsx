@@ -53,6 +53,10 @@ const maragsa = localFont({
   src: "../../public/fonts/Maragsa-Display.woff2",
 });
 
+const magurie = localFont({
+  src: "../../public/fonts/Magurie.woff2",
+});
+
 export const Navbar = ({ children, className }: NavbarProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll({
@@ -128,7 +132,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 md:flex md:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 md:flex md:space-x-2",
         className,
       )}
     >
@@ -136,7 +140,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         <Link
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
+          className="group relative px-6 py-1.5"
           key={`link-${idx}`}
           href={item.link}
         >
@@ -146,7 +150,14 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               className="absolute inset-0 h-full w-full rounded-lg bg-[#EB2D2E]/60"
             />
           )}
-          <span className="relative z-20">{item.name}</span>
+          <span
+            className={cn(
+              "text-muted-foreground group-hover:text-foreground relative z-20 text-lg tracking-widest transition-all duration-300 ease-in-out",
+              magurie.className,
+            )}
+          >
+            {item.name}
+          </span>
         </Link>
       ))}
     </motion.div>
