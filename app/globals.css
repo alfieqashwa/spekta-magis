@@ -87,3 +87,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+@utility thom {
+  @apply z-50 outline-1 outline-rose-200;
+}
+
+@utility kurt {
+  @apply z-50 outline-1 outline-sky-200;
+}

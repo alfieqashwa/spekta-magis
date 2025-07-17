@@ -16,3 +16,6 @@
 [-] Team
 [-] Contact
 [-] Ai Chat
+
+- Home, About (Para Kreator, Spekta Magis), Line Up (Raisa, Project Pop, Rudy Nugraha X Ferdy Element & Candu Band), Ticket (??), Merchandise, AI Chat.
+- Ai: Data
