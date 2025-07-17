@@ -120,7 +120,14 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         className,
       )}
     >
-      {children}
+      {React.Children.map(children, (child) =>
+        React.isValidElement(child)
+          ? React.cloneElement(
+              child as React.ReactElement<{ visible?: boolean }>,
+              { visible },
+            )
+          : child,
+      )}
     </motion.div>
   );
 };
@@ -249,14 +256,15 @@ export const MobileNavToggle = ({
   );
 };
 
-export const NavbarLogo = () => {
+export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
   return (
     <Link href="/" className="z-50 flex items-center justify-center gap-2">
       <img src="/logo.png" alt="logo" className="h-8 w-7" />
       <span
         className={cn(
-          "bg-gradient-to-br from-rose-600 from-30% via-fuchsia-600 via-50% to-orange-500 to-70% bg-clip-text text-xl font-semibold tracking-widest text-transparent",
+          "bg-gradient-to-br from-rose-600 from-30% via-fuchsia-600 via-50% to-orange-500 to-70% bg-clip-text font-semibold text-transparent",
           maragsa.className,
+          visible ? "text-base tracking-wide" : "text-lg tracking-widest",
         )}
       >
         SpektaMagis
