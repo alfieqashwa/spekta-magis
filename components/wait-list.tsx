@@ -4,20 +4,21 @@ import { Spotlight } from "@/components/ui/spotlight";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
-import { Bricolage_Grotesque } from "next/font/google";
 import localFont from "next/font/local";
 import CountdownTimer from "./countdown-timer";
 import { Footer } from "./footer";
 import { ParticlesProps } from "./ui/particles";
 import RippleWaveLoader from "./ui/ripplewave-loader";
 
+// import { Bricolage_Grotesque } from "next/font/google";
+// const brico = Bricolage_Grotesque({
+//   subsets: ["latin"],
+// });
+
 const maragsa = localFont({
   src: "../public/fonts/Maragsa-Display.woff2",
 });
 
-const brico = Bricolage_Grotesque({
-  subsets: ["latin"],
-});
 const Particles = dynamic<ParticlesProps>(
   () => import("./ui/particles").then((mod) => mod.Particles),
   {

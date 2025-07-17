@@ -2,11 +2,12 @@
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import {
-  motion,
   AnimatePresence,
-  useScroll,
+  motion,
   useMotionValueEvent,
+  useScroll,
 } from "motion/react";
+import localFont from "next/font/local";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
 
@@ -47,6 +48,10 @@ interface MobileNavMenuProps {
   isOpen: boolean;
   onClose: () => void;
 }
+
+const maragsa = localFont({
+  src: "../../public/fonts/Maragsa-Display.woff2",
+});
 
 export const Navbar = ({ children, className }: NavbarProps) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -237,7 +242,12 @@ export const NavbarLogo = () => {
   return (
     <Link href="/" className="z-50 flex items-center justify-center gap-2">
       <img src="/logo.png" alt="logo" className="h-8 w-7" />
-      <span className="bg-primary from-foreground to-primary via-rose-200 bg-clip-text font-semibold text-transparent md:text-xl dark:bg-gradient-to-b">
+      <span
+        className={cn(
+          "bg-gradient-to-br from-rose-600 from-30% via-fuchsia-600 via-50% to-orange-500 to-70% bg-clip-text text-xl font-semibold tracking-wider text-transparent",
+          maragsa.className,
+        )}
+      >
         SpektaMagis
       </span>
     </Link>

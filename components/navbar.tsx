@@ -1,19 +1,18 @@
 "use client";
 
 import {
+  MobileNav,
+  MobileNavHeader,
+  MobileNavMenu,
+  MobileNavToggle,
   Navbar,
+  NavbarButton,
+  NavbarLogo,
   NavBody,
   NavItems,
-  MobileNav,
-  NavbarLogo,
-  NavbarButton,
-  MobileNavHeader,
-  MobileNavToggle,
-  MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
-import { useState } from "react";
 import { redirect } from "next/navigation";
-import { ParaKreator } from "./para-kreator";
+import { useState } from "react";
 
 export function NavbarSpekta() {
   const navItems = [
