@@ -66,7 +66,7 @@ export function NavbarSpekta() {
               key={`mobile-link-${idx}`}
               href={item.link}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="relative text-neutral-300"
+              className="relative text-[#EB2D2E]"
             >
               <span className="block">{item.name}</span>
             </a>

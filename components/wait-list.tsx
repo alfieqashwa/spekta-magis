@@ -35,7 +35,7 @@ export default function WaitlistPage() {
         quantity={150}
         ease={8}
         refresh
-        color="#e60a64"
+        color={"#EB2D2E"}
       />
       <div className="relative z-[100] mx-auto max-w-2xl px-4 py-16 text-center">
         <motion.h1
