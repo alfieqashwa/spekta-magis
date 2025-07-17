@@ -36,10 +36,6 @@ export default function WaitlistPage() {
         refresh
         color="#e60a64"
       />
-
-      {/* <h1 className="text-6xl md:text-8xl font-extrabold bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-700 text-transparent bg-clip-text drop-shadow-[0_8px_6px_rgba(0,0,0,0.4)] tracking-tight font-serif">
-  SPEKTAMAGIS
-</h1> */}
       <div className="relative z-[100] mx-auto max-w-2xl px-4 py-16 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}

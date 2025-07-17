@@ -33,7 +33,7 @@ export default function CountdownTimer() {
     }
 
     return (
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center font-bold tracking-widest">
+      <div className="mt-12 grid grid-cols-2 gap-6 text-center font-bold tracking-widest md:grid-cols-4">
         <CountdownCard context={String(days).padStart(2, "0")} title="Days" />
         <CountdownCard context={String(hours).padStart(2, "0")} title="Hours" />
         <CountdownCard context={String(minutes).padStart(2, "0")} title="Min" />
@@ -43,15 +43,15 @@ export default function CountdownTimer() {
   };
 
   return (
-    <div className="dark:text-white p-6 rounded-lg shadow-lg mt-2 ">
+    <div className="mt-2 rounded-lg p-6 shadow-lg dark:text-white">
       <motion.article
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.7 }}
-        className="mb-4 font-semibold text-center"
+        className="mb-4 text-center font-semibold"
       >
         <h1 className="text-base md:text-lg">Saturday, 20 September 2025</h1>
-        <h1 className="text-sm md:text-base text-muted-foreground whitespace-nowrap">
+        <h1 className="text-muted-foreground text-sm whitespace-nowrap md:text-base">
           Kalawa Convention Hall,
           <br className="md:hidden" />{" "}
           <span className="whitespace-nowrap">Palangka Raya</span>
@@ -74,9 +74,9 @@ const CountdownCard = ({
     initial={{ opacity: 0, scale: "70%" }}
     animate={{ opacity: 1, scale: "100%" }}
     transition={{ duration: 1, delay: 0.7 }}
-    className="flex flex-col items-center justify-center rounded-lg shadow-lg border border-primary/10 bg-white/5 p-4 backdrop-blur-md transform-gpu glass [box-shadow:0_-20px_80px_-20px_#ff7aa42f_inset]"
+    className="border-primary/10 glass flex transform-gpu flex-col items-center justify-center rounded-lg border bg-white/5 p-4 shadow-lg [box-shadow:0_-20px_80px_-20px_#ff7aa42f_inset] backdrop-blur-md"
   >
-    <div className="text-3xl text-rose-500 font-mono">{context}</div>
-    <div className="text-sm uppercase text-muted-foreground">{title}</div>
+    <div className="font-mono text-3xl text-rose-500">{context}</div>
+    <div className="text-muted-foreground text-sm uppercase">{title}</div>
   </motion.div>
 );
