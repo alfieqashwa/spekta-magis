@@ -22,23 +22,23 @@ export function NavbarSpekta() {
   const navItems = [
     {
       name: "About",
-      link: "/",
+      link: "/about",
     },
     {
       name: "Line Up",
-      link: "/",
+      link: "/line-up",
     },
     {
       name: "Ticket",
-      link: "/",
+      link: "/ticket",
     },
     {
       name: "Merchandise",
-      link: "/",
+      link: "/merchandise",
     },
     {
       name: "AI",
-      link: "/",
+      link: "/ai-chat",
     },
   ];
 
