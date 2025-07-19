@@ -1,8 +1,6 @@
-import CountdownTimer from "@/components/countdown-timer";
-import { HeroTitle } from "@/components/hero-title";
+import { AllArtists } from "@/components/all-artists";
 import { ParaKreator } from "@/components/para-kreator";
 import Waitlist from "@/components/wait-list";
-import Image from "next/image";
 
 export default function Home() {
   const ORIGINAL_WIDTH = 5781;
@@ -14,17 +12,7 @@ export default function Home() {
   return (
     <div className="relative">
       <div className="absolute inset-0 m-0 md:m-20">
-        <div className="flex h-full items-center justify-center">
-          <Image
-            src="/all-artists.png"
-            alt="All Artists"
-            priority
-            sizes="100vw"
-            width={newWidth}
-            height={newHeight}
-            className="object-cover opacity-50"
-          />
-        </div>
+        <AllArtists newWidth={newWidth} newHeight={newHeight} />
       </div>
       <ParaKreator />
       <Waitlist />

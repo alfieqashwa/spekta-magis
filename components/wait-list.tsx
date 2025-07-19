@@ -1,14 +1,9 @@
 "use client";
 
 import { Spotlight } from "@/components/ui/spotlight";
-import { cn } from "@/lib/utils";
-import { motion } from "motion/react";
 import dynamic from "next/dynamic";
-import localFont from "next/font/local";
-import { ParticlesProps } from "./ui/particles";
-import RippleWaveLoader from "./ui/ripplewave-loader";
 import { HeroTitle } from "./hero-title";
-import CountdownTimer from "./countdown-timer";
+import { ParticlesProps } from "./ui/particles";
 
 // import { Bricolage_Grotesque } from "next/font/google";
 // const brico = Bricolage_Grotesque({
