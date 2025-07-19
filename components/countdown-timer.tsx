@@ -33,7 +33,7 @@ export default function CountdownTimer() {
     }
 
     return (
-      <div className="mt-12 grid grid-cols-2 gap-6 text-center font-bold tracking-widest md:grid-cols-4">
+      <div className="grid grid-cols-4 gap-4 text-center font-bold tracking-widest md:gap-6">
         <CountdownCard context={String(days).padStart(2, "0")} title="Days" />
         <CountdownCard context={String(hours).padStart(2, "0")} title="Hours" />
         <CountdownCard context={String(minutes).padStart(2, "0")} title="Min" />
@@ -43,7 +43,7 @@ export default function CountdownTimer() {
   };
 
   return (
-    <div className="mt-2 rounded-lg p-6 shadow-lg dark:text-white">
+    <div className="mt-44 rounded-lg p-0 shadow-lg md:mt-16 md:p-6 dark:text-white">
       <motion.article
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -76,7 +76,9 @@ const CountdownCard = ({
     transition={{ duration: 1, delay: 0.7 }}
     className="border-primary/10 glass flex transform-gpu flex-col items-center justify-center rounded-lg border bg-white/5 p-4 shadow-lg [box-shadow:0_-20px_80px_-20px_#ff7aa42f_inset] backdrop-blur-md"
   >
-    <div className="font-mono text-3xl text-rose-500">{context}</div>
-    <div className="text-muted-foreground text-sm uppercase">{title}</div>
+    <div className="font-mono text-lg text-rose-500 md:text-3xl">{context}</div>
+    <div className="text-muted-foreground text-xs uppercase md:text-sm">
+      {title}
+    </div>
   </motion.div>
 );
