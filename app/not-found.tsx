@@ -2,6 +2,12 @@
 
 import Link from "next/link";
 import { FaTools } from "react-icons/fa";
+import { Bricolage_Grotesque } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const brico = Bricolage_Grotesque({
+  subsets: ["latin"],
+});
 
 export default function NotFound() {
   return (
@@ -10,7 +16,12 @@ export default function NotFound() {
         <FaTools className="text-7xl md:text-8xl" />
       </div>
 
-      <h1 className="text-center text-[clamp(2.5rem,6vw,4rem)] font-bold tracking-tight text-white">
+      <h1
+        className={cn(
+          "text-center text-[clamp(2.5rem,6vw,4rem)] font-bold text-white",
+          brico.className,
+        )}
+      >
         Under Construction
       </h1>
 
@@ -20,7 +31,10 @@ export default function NotFound() {
 
       <Link
         href="/"
-        className="mt-6 inline-block rounded-md bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-neutral-200"
+        className={cn(
+          "mt-6 inline-block rounded-md bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-neutral-200",
+          brico.className,
+        )}
       >
         Go back home
       </Link>
