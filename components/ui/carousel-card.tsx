@@ -3,11 +3,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { SparklesIcon } from "lucide-react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { SparklesIcon } from "lucide-react";
+import "swiper/css/pagination";
 import {
   Autoplay,
   EffectCoverflow,
@@ -67,15 +67,15 @@ export const CardCarousel: React.FC<CarouselProps> = ({
             className="absolute top-6 left-4 rounded-[14px] border text-base md:left-6"
           >
             <SparklesIcon className="fill-[#EEBDE0] stroke-1 text-neutral-800" />{" "}
-            Latest component
+            New cool products
           </Badge>
           <div className="flex flex-col justify-center pt-14 pb-2 pl-4 md:items-center">
             <div className="flex gap-2">
               <div>
                 <h3 className="text-4xl font-bold tracking-tight opacity-85">
-                  Card Carousel
+                  Our Merchandises
                 </h3>
-                <p>Seamless Images carousel animation.</p>
+                <p>Wear the music. Relive the moment.</p>
               </div>
             </div>
           </div>
