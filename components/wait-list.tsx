@@ -5,18 +5,15 @@ import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 import localFont from "next/font/local";
-import CountdownTimer from "./countdown-timer";
 import { ParticlesProps } from "./ui/particles";
 import RippleWaveLoader from "./ui/ripplewave-loader";
+import { HeroTitle } from "./hero-title";
+import CountdownTimer from "./countdown-timer";
 
 // import { Bricolage_Grotesque } from "next/font/google";
 // const brico = Bricolage_Grotesque({
 //   subsets: ["latin"],
 // });
-
-const maragsa = localFont({
-  src: "../public/fonts/Maragsa-Display.woff2",
-});
 
 const Particles = dynamic<ParticlesProps>(
   () => import("./ui/particles").then((mod) => mod.Particles),
@@ -36,33 +33,7 @@ export default function WaitlistPage() {
         refresh
         color={"#EB2D2E"}
       />
-      <div className="relative z-[100] mx-auto max-w-2xl px-4 py-16 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className={cn(
-            "mb-2 flex cursor-crosshair justify-center bg-gradient-to-b from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-4xl font-bold tracking-widest text-transparent drop-shadow-[0_8px_6px_rgba(0,0,0,0.4)] sm:text-5xl md:mb-6 md:text-7xl",
-            maragsa.className,
-          )}
-        >
-          SPEKTAMAGIS
-        </motion.h1>
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className={cn(
-            "mt-2 mb-10 bg-gradient-to-b from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-xl font-semibold tracking-widest text-transparent drop-shadow-[0_8px_6px_rgba(0,0,0,0.4)] sm:text-2xl md:text-4xl",
-            maragsa.className,
-          )}
-        >
-          Color Of Unity
-        </motion.p>
-        <RippleWaveLoader />
-        <CountdownTimer />
-      </div>
+      <HeroTitle />
 
       <style jsx global>{`
         @keyframes float {
