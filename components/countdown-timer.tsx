@@ -4,6 +4,12 @@ import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import Countdown, { CountdownRendererFn } from "react-countdown";
+import { Bricolage_Grotesque } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const brico = Bricolage_Grotesque({
+  subsets: ["latin"],
+});
 
 const targetDate = new Date("2025-09-20T09:00:00Z"); // UTC time of 16:00 in GMT+7
 
@@ -43,15 +49,20 @@ export default function CountdownTimer() {
   };
 
   return (
-    <div className="mt-44 rounded-lg p-0 shadow-lg md:mt-16 md:p-6 dark:text-white">
+    <div
+      className={cn(
+        "text-foreground absolute bottom-1/12 rounded-lg p-0 tracking-wide shadow-lg md:bottom-1/6 md:p-6 md:tracking-widest",
+        brico.className,
+      )}
+    >
       <motion.article
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.7 }}
-        className="mb-4 text-center font-semibold"
+        className="border-primary/10 glass mb-4 flex transform-gpu flex-col items-center justify-center rounded-lg border bg-white/5 p-4 text-center font-semibold shadow-lg [box-shadow:0_-20px_80px_-20px_#ff7aa42f_inset] backdrop-blur-md"
       >
-        <h1 className="text-base md:text-lg">Saturday, 20 September 2025</h1>
-        <h1 className="text-muted-foreground text-sm whitespace-nowrap md:text-base">
+        <h1 className="text-base md:text-xl">Saturday, 20 September 2025</h1>
+        <h1 className="text-foreground text-sm whitespace-nowrap md:text-lg">
           Kalawa Convention Hall,
           <br className="md:hidden" />{" "}
           <span className="whitespace-nowrap">Palangka Raya</span>

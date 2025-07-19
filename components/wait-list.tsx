@@ -4,6 +4,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 import dynamic from "next/dynamic";
 import { HeroTitle } from "./hero-title";
 import { ParticlesProps } from "./ui/particles";
+import CountdownTimer from "./countdown-timer";
 
 // import { Bricolage_Grotesque } from "next/font/google";
 // const brico = Bricolage_Grotesque({
@@ -29,6 +30,7 @@ export default function WaitlistPage() {
         color={"#EB2D2E"}
       />
       <HeroTitle />
+      <CountdownTimer />
 
       <style jsx global>{`
         @keyframes float {
