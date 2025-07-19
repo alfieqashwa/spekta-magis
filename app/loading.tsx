@@ -1,5 +1,9 @@
 import RippleWaveLoader from "@/components/ui/ripplewave-loader";
 
 export default function Loading() {
-  return <RippleWaveLoader />;
+  return (
+    <div className="grid h-screen place-items-center">
+      <RippleWaveLoader />;
+    </div>
+  );
 }
