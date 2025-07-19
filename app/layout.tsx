@@ -49,9 +49,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark scroll-smooth">
       <body
-        className={`${geistSans.className} ${geistMono.className} scroll-smooth antialiased`}
+        className={`${geistSans.className} ${geistMono.className} antialiased`}
       >
         <NavbarSpekta />
         {children}
