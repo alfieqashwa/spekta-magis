@@ -32,7 +32,7 @@ export default function NotFound() {
       <Link
         href="/"
         className={cn(
-          "mt-6 inline-block rounded-md bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-neutral-200",
+          "text-foreground mt-6 inline-block rounded-md bg-rose-900 px-6 py-3 text-sm font-medium transition hover:bg-rose-700",
           brico.className,
         )}
       >
