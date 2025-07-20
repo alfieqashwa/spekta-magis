@@ -16,6 +16,7 @@ import {
 } from "swiper/modules";
 
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 
 interface CarouselProps {
   images: { src: string; alt: string }[];
@@ -113,10 +114,11 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                 {images.map((image, index) => (
                   <SwiperSlide key={index}>
                     <div className="size-full rounded-3xl">
-                      <img
+                      <Image
                         src={image.src}
-                        width={500}
-                        height={500}
+                        width={600}
+                        height={600}
+                        priority
                         className="size-full rounded-xl"
                         alt={image.alt}
                       />
