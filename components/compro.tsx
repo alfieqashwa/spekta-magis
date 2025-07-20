@@ -13,22 +13,6 @@ const space = Geist({
   weight: "400",
 });
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2, // adjust stagger speed here
-      delayChildren: 0.5, // optional: delay before children start
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 50 },
-  show: { opacity: 1, y: 0 },
-};
-
 export function Compro({ compro }: { compro: { src: string; alt: string }[] }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
@@ -59,25 +43,18 @@ export function Compro({ compro }: { compro: { src: string; alt: string }[] }) {
           <section>
             <motion.div
               className="grid grid-cols-1 gap-4 md:grid-cols-2"
-              variants={containerVariants}
-              initial="hidden"
-              animate="show"
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.5, delay: 0 }}
             >
               {compro.map((compro, i) => (
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 1.25 }}
-                  variants={itemVariants}
-                  className="cursor-pointer"
-                  key={`${i}-${compro.alt}`}
-                >
+                <div className="cursor-pointer" key={`${i}-${compro.alt}`}>
                   <ZoomableImage
                     src={compro.src}
                     alt={compro.alt}
                     className="rounded-sm"
                   />
-                </motion.div>
+                </div>
               ))}
             </motion.div>
           </section>
