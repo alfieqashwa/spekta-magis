@@ -4,19 +4,19 @@ import { type CardProps } from "@/components/ui/pulse-card";
 export default function LineupPage() {
   const cards = [
     {
-      title: "Rudy & Ferdy",
-      titleMobile: "Rudy & Ferdy",
-      imageUrl: "/rudy-ferdy.png",
-      alt: "Rudy Ferdy",
-      variant: "emerald",
-      showGridLines: true,
-    },
-    {
       title: "Raisa",
       titleMobile: "Raisa",
       imageUrl: "/raisa-bw.jpg",
       alt: "Raisa",
       variant: "purple",
+      showGridLines: true,
+    },
+    {
+      title: "Rudy x Ferdy",
+      titleMobile: "Rudy x Ferdy",
+      imageUrl: "/rudy-ferdy.png",
+      alt: "Rudy Ferdy",
+      variant: "emerald",
       showGridLines: true,
     },
     {
