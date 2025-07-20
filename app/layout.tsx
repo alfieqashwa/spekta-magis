@@ -72,7 +72,7 @@ export default function RootLayout({
   ];
 
   return (
-    <html lang="en" data-scroll-behavior="smooth">
+    <html lang="en" data-scroll-behavior="smooth" className="dark">
       <body
         className={`${geistSans.className} ${geistMono.className} antialiased`}
       >
