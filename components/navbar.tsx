@@ -29,7 +29,7 @@ export function NavbarSpekta() {
       link: "/line-up",
     },
     {
-      name: "Ticket",
+      name: "Get Ticket",
       link: "/ticket",
     },
     {
@@ -72,7 +72,7 @@ export function NavbarSpekta() {
               key={`mobile-link-${idx}`}
               href={item.link}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="relative tracking-widest text-amber-600"
+              className="text-muted-foreground relative tracking-widest"
             >
               <span
                 className={cn(
