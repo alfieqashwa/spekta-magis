@@ -20,14 +20,6 @@ export default function LineupPage() {
       showGridLines: true,
     },
     {
-      title: "Beddu",
-      titleMobile: "Beddu",
-      imageUrl: "/beddu.png",
-      alt: "Beddu",
-      variant: "rose",
-      showGridLines: true,
-    },
-    {
       title: "Project Pop",
       titleMobile: "Project Pop",
       imageUrl: "/project-pop.png",
