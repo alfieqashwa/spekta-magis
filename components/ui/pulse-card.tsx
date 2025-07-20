@@ -155,7 +155,7 @@ export function CardHoverEffect({
       >
         <h3
           className={cn(
-            "relative z-20 -rotate-1 bg-gradient-to-r from-amber-500 from-25% to-rose-600 to-75% bg-clip-text pt-6 text-2xl tracking-widest whitespace-nowrap text-transparent md:hidden",
+            "relative z-20 -rotate-1 bg-gradient-to-r from-amber-500 from-25% to-rose-600 to-75% bg-clip-text pt-6 text-2xl tracking-widest whitespace-nowrap text-transparent lg:hidden",
             magurie.className,
           )}
         >
