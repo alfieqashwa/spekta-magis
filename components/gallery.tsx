@@ -68,7 +68,7 @@ export function Gallery() {
           >
             Merchandise
           </h2>
-          <p className="mt-5 text-center text-lg text-zinc-500">
+          <p className="mt-5 text-center text-lg text-zinc-500 md:text-xl">
             This isn’t just merch — it’s a badge of the night you felt alive.
           </p>
         </motion.div>
