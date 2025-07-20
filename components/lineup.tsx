@@ -23,7 +23,7 @@ export function LineUp(props: LineUpProps) {
 
   return (
     <WrapperBackground sectionId="lineup">
-      <div className="mx-auto px-2">
+      <div className="relative mx-auto px-2">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -47,7 +47,6 @@ export function LineUp(props: LineUpProps) {
         <div className="mx-auto mt-10 mb-12 grid w-full max-w-7xl grid-cols-1 gap-8 text-center md:grid-cols-6 lg:gap-12">
           {props.cards.map((card, i) => (
             <motion.div
-              key={`${i}-${card.title}`}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1.25 }}
@@ -57,6 +56,7 @@ export function LineUp(props: LineUpProps) {
                   ? "md:col-start-1 md:col-end-7"
                   : "md:col-span-3",
               )}
+              key={`${i}-${card.title}`}
             >
               <CardHoverEffect
                 title={card.title}
