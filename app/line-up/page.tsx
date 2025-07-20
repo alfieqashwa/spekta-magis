@@ -8,15 +8,15 @@ export default function LineupPage() {
       titleMobile: "Raisa",
       imageUrl: "/raisa-bw.jpg",
       alt: "Raisa",
-      variant: "purple",
+      variant: "rose",
       showGridLines: true,
     },
     {
       title: "Rudy x Ferdy",
       titleMobile: "Rudy x Ferdy",
       imageUrl: "/rudy-ferdy.png",
-      alt: "Rudy Ferdy",
-      variant: "emerald",
+      alt: "Rudy x Ferdy",
+      variant: "rose",
       showGridLines: true,
     },
     {

@@ -51,7 +51,9 @@ export function LineUp(props: LineUpProps) {
             className={cn(
               card.title === "Project Pop"
                 ? "sm:col-span-4 md:col-start-2 md:col-end-6"
-                : "sm:col-span-4 md:col-span-2",
+                : card.title === "Raisa"
+                  ? "sm:col-span-4 md:col-start-2 md:col-end-4"
+                  : "sm:col-span-4 md:col-span-2",
             )}
           >
             <CardHoverEffect

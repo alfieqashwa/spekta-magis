@@ -155,7 +155,7 @@ export function CardHoverEffect({
       >
         <h3
           className={cn(
-            "relative z-20 -rotate-1 bg-gradient-to-r from-amber-500 to-rose-600 bg-clip-text pt-6 text-2xl tracking-widest whitespace-nowrap text-transparent md:hidden",
+            "relative z-20 -rotate-1 bg-gradient-to-r from-amber-500 from-25% to-rose-600 to-75% bg-clip-text pt-6 text-2xl tracking-widest whitespace-nowrap text-transparent md:hidden",
             magurie.className,
           )}
         >
@@ -167,14 +167,14 @@ export function CardHoverEffect({
           fill
           priority
           sizes="100vw"
-          className="object-cover sepia-100"
+          className="object-cover sepia-50"
         />
       </div>
 
       <h1
         className={cn(
-          "text-muted-foreground absolute rotate-90 whitespace-nowrap lg:text-6xl",
-          title === "Rudy & Ferdy"
+          "text-muted-foreground/70 absolute rotate-90 font-bold whitespace-nowrap lg:text-6xl",
+          title === "Rudy x Ferdy"
             ? "top-60 -right-[10.5rem]"
             : title === "Project Pop"
               ? "top-60 -right-[9.5rem]"
