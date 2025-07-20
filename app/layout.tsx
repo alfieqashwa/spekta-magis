@@ -54,7 +54,9 @@ export default function RootLayout({
         className={`${geistSans.className} ${geistMono.className} antialiased`}
       >
         <NavbarSpekta />
-        {children}
+        <main className="container mx-auto max-w-[2048px] min-w-[275px]">
+          {children}
+        </main>
         <Footer />
         <Analytics />
         <SpeedInsights />
