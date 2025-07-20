@@ -1,5 +1,10 @@
 import { LineUp } from "@/components/lineup";
 import { type CardProps } from "@/components/ui/pulse-card";
+import { type Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Line Up",
+};
 
 export default function LineupPage() {
   const cards = [

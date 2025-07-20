@@ -2,15 +2,10 @@
 
 import { cn } from "@/lib/utils";
 import { motion, useInView } from "motion/react";
-import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 import { useRef } from "react";
 import { CardHoverEffect, type CardProps } from "./ui/pulse-card";
 import { WrapperBackground } from "./wrapper-background";
-
-export const metadata: Metadata = {
-  title: "Line Up",
-};
 
 const space = Geist({
   subsets: ["latin"],
