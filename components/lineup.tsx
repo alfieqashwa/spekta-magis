@@ -37,7 +37,7 @@ export function LineUp(props: LineUpProps) {
         >
           Line Up
         </h2>
-        <p className="mt-5 text-center text-lg text-zinc-500">
+        <p className="mx-4 mt-5 text-center text-lg text-zinc-500">
           Every Beat Has a Name — Meet the Artists.
         </p>
       </motion.div>
