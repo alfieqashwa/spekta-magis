@@ -7,6 +7,7 @@ import RippleWaveLoader from "./ui/ripplewave-loader";
 
 const maragsa = localFont({
   src: "../public/fonts/Maragsa-Display.woff2",
+  preload: false,
 });
 
 export const HeroTitle = () => (

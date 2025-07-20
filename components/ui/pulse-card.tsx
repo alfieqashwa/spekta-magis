@@ -6,6 +6,7 @@ import React from "react";
 
 const magurie = localFont({
   src: "../../public/fonts/Magurie.woff2",
+  preload: false,
 });
 export interface CardProps {
   title: string;

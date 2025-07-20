@@ -51,10 +51,12 @@ interface MobileNavMenuProps {
 
 const maragsa = localFont({
   src: "../../public/fonts/Maragsa-Display.woff2",
+  preload: false,
 });
 
 const magurie = localFont({
   src: "../../public/fonts/Magurie.woff2",
+  preload: false,
 });
 
 export const Navbar = ({ children, className }: NavbarProps) => {

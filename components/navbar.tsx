@@ -16,6 +16,7 @@ import { useState } from "react";
 
 const magurie = localFont({
   src: "../public/fonts/Magurie.woff2",
+  preload: false,
 });
 
 export function NavbarSpekta({

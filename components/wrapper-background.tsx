@@ -7,6 +7,7 @@ import { Spotlight } from "./ui/spotlight";
 
 const maragsa = localFont({
   src: "../public/fonts/Maragsa-Display.woff2",
+  preload: false,
 });
 
 export function WrapperBackground({
