@@ -1,7 +1,13 @@
 "use client";
 
+import { cn } from "@/lib/utils";
+import localFont from "next/font/local";
 import { ReactNode } from "react";
 import { Spotlight } from "./ui/spotlight";
+
+const maragsa = localFont({
+  src: "../public/fonts/Maragsa-Display.woff2",
+});
 
 export function WrapperBackground({
   sectionId,
@@ -28,22 +34,24 @@ export function WrapperBackground({
         <Spotlight />
       </div>
       <div className="absolute top-1/2 left-0 hidden -translate-y-1/2 lg:block">
-        <img
-          alt="Spektamagis graphic 1"
-          width={300}
-          height={300}
-          className="-rotate-90"
-          src="/text-spektamagis-black.png"
-        />
+        <h1
+          className={cn(
+            "text-muted -rotate-90 text-5xl transition-colors duration-500 ease-in-out hover:text-amber-500/70",
+            maragsa.className,
+          )}
+        >
+          SPEKTAMAGIS
+        </h1>
       </div>
       <div className="absolute top-1/2 right-0 hidden -translate-y-1/2 lg:block">
-        <img
-          alt="Spektamagis graphic 2"
-          width={300}
-          height={300}
-          className="rotate-90 brightness-[0.95]"
-          src="/text-spektamagis-black.png"
-        />
+        <h1
+          className={cn(
+            "text-muted rotate-90 text-5xl transition-colors duration-500 ease-in-out hover:text-amber-500/70",
+            maragsa.className,
+          )}
+        >
+          SPEKTAMAGIS
+        </h1>
       </div>
       {children}
     </section>

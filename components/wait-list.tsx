@@ -2,14 +2,9 @@
 
 import { Spotlight } from "@/components/ui/spotlight";
 import dynamic from "next/dynamic";
+import CountdownTimer from "./countdown-timer";
 import { HeroTitle } from "./hero-title";
 import { ParticlesProps } from "./ui/particles";
-import CountdownTimer from "./countdown-timer";
-
-// import { Bricolage_Grotesque } from "next/font/google";
-// const brico = Bricolage_Grotesque({
-//   subsets: ["latin"],
-// });
 
 const Particles = dynamic<ParticlesProps>(
   () => import("./ui/particles").then((mod) => mod.Particles),
