@@ -1,6 +1,6 @@
 import { AllArtists } from "@/components/all-artists";
 import { ParaKreator } from "@/components/para-kreator";
-import Waitlist from "@/components/wait-list";
+import { ParticlesBackground } from "@/components/particles-background";
 
 export default function Home() {
   const ORIGINAL_WIDTH = 5781;
@@ -12,10 +12,10 @@ export default function Home() {
   return (
     <div className="relative">
       <div className="absolute inset-0 m-0 md:m-20">
-        <AllArtists newWidth={newWidth} newHeight={newHeight} />
+        <AllArtists width={newWidth} height={newHeight} />
       </div>
       <ParaKreator />
-      <Waitlist />
+      <ParticlesBackground />
     </div>
   );
 }

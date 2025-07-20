@@ -11,7 +11,7 @@ const brico = Bricolage_Grotesque({
 export default function NotFound() {
   return (
     <WrapperBackground sectionId="not-found">
-      <div className="flex min-h-screen flex-col items-center justify-center px-4 text-white">
+      <div className="relative flex min-h-screen flex-col items-center justify-center px-4 text-white">
         <div className="mb-6 animate-pulse text-yellow-400">
           <FaTools className="text-7xl md:text-8xl" />
         </div>

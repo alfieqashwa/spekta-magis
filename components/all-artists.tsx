@@ -4,11 +4,11 @@ import { motion } from "motion/react";
 import Image from "next/image";
 
 export const AllArtists = ({
-  newWidth,
-  newHeight,
+  width,
+  height,
 }: {
-  newWidth: number;
-  newHeight: number;
+  width: number;
+  height: number;
 }) => {
   const variable = {
     initial: { opacity: 0 },
@@ -26,8 +26,8 @@ export const AllArtists = ({
         alt="All Artists"
         priority
         sizes="100vw"
-        width={newWidth}
-        height={newHeight}
+        width={width}
+        height={height}
         className="object-cover opacity-50"
       />
     </div>
