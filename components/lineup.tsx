@@ -8,9 +8,9 @@ type LineUpProps = {
   cards: CardProps[];
 };
 
-export const LineUp = (props: LineUpProps) => {
+export function LineUp(props: LineUpProps) {
   return (
-    <div className="flex w-full bg-gradient-to-br from-rose-600/30 from-30% via-fuchsia-600/20 via-50% to-orange-500/35 to-70% py-8">
+    <div className="flex w-full bg-gradient-to-br from-rose-600/30 from-30% via-fuchsia-600/20 via-50% to-orange-500/35 to-70% px-2 py-8">
       <div className="mt-40 grid w-full grid-cols-1 gap-x-8 gap-y-8 text-center sm:grid-cols-4 md:grid-cols-6 md:gap-y-12">
         {props.cards.map((card, i) => (
           <motion.div
@@ -26,8 +26,9 @@ export const LineUp = (props: LineUpProps) => {
           >
             <CardHoverEffect
               title={card.title}
-              alt={card.alt}
+              titleMobile={card.titleMobile}
               imageUrl={card.imageUrl}
+              alt={card.alt}
               variant={card.variant}
               glowEffect={true}
               size={"lg"}
@@ -38,4 +39,4 @@ export const LineUp = (props: LineUpProps) => {
       </div>
     </div>
   );
-};
+}

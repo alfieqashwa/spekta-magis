@@ -1,11 +1,15 @@
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
+import localFont from "next/font/local";
 import Image from "next/image";
 import React from "react";
 
+const magurie = localFont({
+  src: "../../public/fonts/Magurie.woff2",
+});
 export interface CardProps {
   title: string;
-  description?: string;
+  titleMobile?: string;
   imageUrl: string;
   alt: string;
   className?: string;
@@ -81,7 +85,7 @@ const SIZES = {
 
 export function CardHoverEffect({
   title,
-  description,
+  titleMobile,
   imageUrl,
   alt,
   className,
@@ -149,6 +153,14 @@ export function CardHoverEffect({
           title === "Project Pop" ? "w-full lg:w-11/12" : "w-full lg:w-10/12",
         )}
       >
+        <h3
+          className={cn(
+            "relative z-20 -rotate-1 bg-gradient-to-r from-amber-500 to-rose-600 bg-clip-text pt-6 text-2xl tracking-widest whitespace-nowrap text-transparent md:hidden",
+            magurie.className,
+          )}
+        >
+          {titleMobile}
+        </h3>
         <Image
           src={imageUrl}
           alt={alt}
