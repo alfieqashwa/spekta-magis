@@ -61,7 +61,7 @@ export function Compro({ compro }: { compro: { src: string; alt: string }[] }) {
               className="grid grid-cols-1 gap-4 md:grid-cols-2"
               variants={containerVariants}
               initial="hidden"
-              animate={isInView ? "show" : "hidden"}
+              animate="show"
             >
               {compro.map((compro, i) => (
                 <motion.div
@@ -69,6 +69,7 @@ export function Compro({ compro }: { compro: { src: string; alt: string }[] }) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 1.25 }}
                   variants={itemVariants}
+                  className="cursor-pointer"
                   key={`${i}-${compro.alt}`}
                 >
                   <ZoomableImage
