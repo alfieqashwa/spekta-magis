@@ -173,7 +173,7 @@ export function CardHoverEffect({
 
       <h1
         className={cn(
-          "text-muted-foreground/70 absolute rotate-90 font-bold whitespace-nowrap lg:text-6xl",
+          "absolute rotate-90 font-bold whitespace-nowrap text-rose-500/20 transition-all duration-500 ease-in-out group-hover:text-rose-500/40 lg:text-6xl",
           title === "Rudy x Ferdy"
             ? "top-60 -right-[10.5rem]"
             : title === "Project Pop"

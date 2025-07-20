@@ -44,7 +44,7 @@ export function LineUp(props: LineUpProps) {
             Artists.
           </p>
         </motion.div>
-        <div className="mt-10 mb-12 grid w-full grid-cols-1 gap-8 text-center md:grid-cols-6 lg:gap-12">
+        <div className="mx-auto mt-10 mb-12 grid w-full max-w-7xl grid-cols-1 gap-8 text-center md:grid-cols-6 lg:gap-12">
           {props.cards.map((card, i) => (
             <motion.div
               key={i}
@@ -52,9 +52,9 @@ export function LineUp(props: LineUpProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1.25 }}
               className={cn(
-                "mx-0 sm:mx-40 md:mx-0 lg:mx-12 xl:mx-40",
+                "rounded-xl bg-rose-500/10",
                 card.title === "Project Pop"
-                  ? "md:col-start-2 md:col-end-6"
+                  ? "md:col-start-1 md:col-end-7"
                   : "md:col-span-3",
               )}
             >
