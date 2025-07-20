@@ -1,4 +1,9 @@
 import { Compro } from "@/components/compro";
+import { type Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 export default function AboutPage() {
   const compro = [

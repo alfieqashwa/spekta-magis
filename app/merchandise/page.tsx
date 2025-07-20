@@ -1,4 +1,9 @@
 import { Gallery } from "@/components/gallery";
+import { type Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Merchandise",
+};
 
 export default function MerchandisePage() {
   const images = [

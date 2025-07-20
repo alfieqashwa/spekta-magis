@@ -1,6 +1,11 @@
 import { AllArtists } from "@/components/all-artists";
 import { ParaKreator } from "@/components/para-kreator";
 import { ParticlesBackground } from "@/components/particles-background";
+import { type Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home",
+};
 
 export default function Home() {
   const ORIGINAL_WIDTH = 5781;

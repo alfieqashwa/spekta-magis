@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Spekta Magis",
-    default: "Spekta Magis",
+    template: "%s | SpektaMagis",
+    default: "SpektaMagis",
   },
   robots: {
     index: true,
