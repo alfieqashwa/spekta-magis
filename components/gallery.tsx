@@ -23,7 +23,7 @@ export function Gallery({
 
   return (
     <WrapperBackground sectionId="gallery">
-      <div className="relative mx-auto px-2">
+      <div className="mx-auto px-2">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -43,7 +43,7 @@ export function Gallery({
             This isn’t just merch — it’s a badge of the night you felt alive.
           </p>
         </motion.div>
-        <div className="mx-auto mt-10 w-full max-w-4xl rounded-[24px] p-2 shadow-sm md:rounded-t-[44px]">
+        <div className="relative mx-auto mt-10 w-full max-w-4xl rounded-[24px] p-2 shadow-sm md:rounded-t-[44px]">
           <CardCaroursalMerchandise images={images} />
         </div>
       </div>

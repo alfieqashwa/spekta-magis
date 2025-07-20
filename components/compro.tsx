@@ -35,7 +35,7 @@ export function Compro({ compro }: { compro: { src: string; alt: string }[] }) {
 
   return (
     <WrapperBackground sectionId="about">
-      <div className="relative mx-auto px-2">
+      <div className="mx-auto px-2">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -55,7 +55,7 @@ export function Compro({ compro }: { compro: { src: string; alt: string }[] }) {
             Bersama membagun kreativitas & harmoni budaya.
           </p>
         </motion.div>
-        <div className="mx-auto mt-10 w-full max-w-4xl rounded-[24px] p-2 shadow-sm md:rounded-t-[44px]">
+        <div className="relative mx-auto mt-10 w-full max-w-4xl rounded-[24px] p-2 shadow-sm md:rounded-t-[44px]">
           <section>
             <motion.div
               className="grid grid-cols-1 gap-4 md:grid-cols-2"

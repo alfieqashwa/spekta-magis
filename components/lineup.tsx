@@ -23,7 +23,7 @@ export function LineUp(props: LineUpProps) {
 
   return (
     <WrapperBackground sectionId="lineup">
-      <div className="relative mx-auto px-2">
+      <div className="mx-auto px-2">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}

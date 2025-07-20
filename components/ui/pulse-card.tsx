@@ -106,7 +106,7 @@ export function CardHoverEffect({
       whileHover={interactive ? { scale: hoverScale } : undefined}
       transition={{ duration: 0.3, ease: "easeInOut", type: "keyframes" }}
       className={cn(
-        "group relative z-30 w-full cursor-pointer overflow-hidden rounded-2xl",
+        "group relative z-30 w-full overflow-hidden rounded-2xl",
         sizeConfig.padding,
         // Light mode styles
         "bg-white/80 before:bg-linear-to-b before:from-white/5 before:to-white/20 before:backdrop-blur-3xl",
