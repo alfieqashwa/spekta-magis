@@ -13,7 +13,11 @@ const space = Geist({
   weight: "400",
 });
 
-export function Gallery() {
+export function Gallery({
+  images,
+}: {
+  images: { src: string; alt: string }[];
+}) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -40,7 +44,7 @@ export function Gallery() {
           </p>
         </motion.div>
         <div className="mx-auto mt-10 w-full max-w-4xl rounded-[24px] p-2 shadow-sm md:rounded-t-[44px]">
-          <CardCaroursalMerchandise />
+          <CardCaroursalMerchandise images={images} />
         </div>
       </div>
     </WrapperBackground>

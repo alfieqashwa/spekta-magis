@@ -18,30 +18,11 @@ const magurie = localFont({
   src: "../public/fonts/Magurie.woff2",
 });
 
-export function NavbarSpekta() {
-  const navItems = [
-    {
-      name: "About",
-      link: "/about",
-    },
-    {
-      name: "Line Up",
-      link: "/line-up",
-    },
-    {
-      name: "Get Ticket",
-      link: "/ticket",
-    },
-    {
-      name: "Merchandise",
-      link: "/merchandise",
-    },
-    {
-      name: "AI",
-      link: "/ai-chat",
-    },
-  ];
-
+export function NavbarSpekta({
+  navItems,
+}: {
+  navItems: { name: string; link: string }[];
+}) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (

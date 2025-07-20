@@ -47,7 +47,7 @@ export function LineUp(props: LineUpProps) {
         <div className="mx-auto mt-10 mb-12 grid w-full max-w-7xl grid-cols-1 gap-8 text-center md:grid-cols-6 lg:gap-12">
           {props.cards.map((card, i) => (
             <motion.div
-              key={i}
+              key={`${i}-${card.title}`}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1.25 }}

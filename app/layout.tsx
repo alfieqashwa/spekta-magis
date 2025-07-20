@@ -48,12 +48,35 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const navItems = [
+    {
+      name: "About",
+      link: "/about",
+    },
+    {
+      name: "Line Up",
+      link: "/line-up",
+    },
+    {
+      name: "Get Ticket",
+      link: "/",
+    },
+    {
+      name: "Merchandise",
+      link: "/merchandise",
+    },
+    {
+      name: "AI",
+      link: "/ai-chat",
+    },
+  ];
+
   return (
     <html lang="en" className="dark scroll-smooth">
       <body
         className={`${geistSans.className} ${geistMono.className} antialiased`}
       >
-        <NavbarSpekta />
+        <NavbarSpekta navItems={navItems} />
         <main className="container mx-auto max-w-[2048px] min-w-[275px]">
           {children}
         </main>

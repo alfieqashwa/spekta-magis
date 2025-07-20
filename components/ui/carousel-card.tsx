@@ -111,8 +111,8 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                 }
                 modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
               >
-                {images.map((image, index) => (
-                  <SwiperSlide key={index}>
+                {images.map((image, i) => (
+                  <SwiperSlide key={`${i}-${image.alt}`}>
                     <div className="size-full rounded-3xl">
                       <Image
                         src={image.src}
