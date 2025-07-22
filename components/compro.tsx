@@ -33,7 +33,7 @@ export function Compro({ compro }: { compro: { src: string; alt: string }[] }) {
               space.className,
             )}
           >
-            About Us
+            Promotor
           </h2>
           <p className="mt-5 text-center text-lg text-zinc-500 md:text-xl">
             Bersama membagun kreativitas & harmoni budaya.

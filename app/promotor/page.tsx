@@ -2,10 +2,10 @@ import { Compro } from "@/components/compro";
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "Promotor",
 };
 
-export default function AboutPage() {
+export default function PromotorPage() {
   const compro = [
     { src: "/compro/1.jpg", alt: "compro-1" },
     { src: "/compro/2.jpg", alt: "compro-2" },

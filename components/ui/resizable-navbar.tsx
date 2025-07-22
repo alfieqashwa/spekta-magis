@@ -153,7 +153,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     >
       {items.map((item, idx) =>
         item.name === "About" ? (
-          <NestedAbout key={`${idx}-{item.link}`}>
+          <NestedAbout key={`desktop-link-${idx}`}>
             <button
               onMouseEnter={() => setHovered(idx)}
               onClick={onItemClick}
@@ -367,7 +367,7 @@ const NestedAbout = ({ children }: { children: ReactNode }) => (
             magurie.className,
           )}
         >
-          <Link href="/about">Event</Link>
+          <Link href="/event">Event</Link>
         </DropdownMenuItem>
       </DropdownMenuGroup>
     </DropdownMenuContent>

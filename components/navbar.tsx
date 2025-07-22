@@ -26,6 +26,24 @@ export function NavbarSpekta({
 }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // === STARTS: For Mobile Navigation ===
+
+  // Replace "About" with "Promotor"
+  const updatedNavItems = navItems.map((item) =>
+    item.name === "About" ? { name: "Promotor", link: "/promotor" } : item,
+  );
+
+  // Insert "Events" after "Promotor"
+  const promotorIndex = updatedNavItems.findIndex(
+    (item) => item.name === "Promotor",
+  );
+  const modifiedItems = [
+    ...updatedNavItems.slice(0, promotorIndex + 1),
+    { name: "Events", link: "/events" },
+    ...updatedNavItems.slice(promotorIndex + 1),
+  ];
+  // === ENDS: For Mobile Navigation ===
+
   return (
     <Navbar className="z-[150]">
       <NavBody>
@@ -49,7 +67,7 @@ export function NavbarSpekta({
           isOpen={isMobileMenuOpen}
           onClose={() => setIsMobileMenuOpen(false)}
         >
-          {navItems.map((item, idx) => (
+          {modifiedItems.map((item, idx) => (
             <a
               key={`mobile-link-${idx}`}
               href={item.link}
