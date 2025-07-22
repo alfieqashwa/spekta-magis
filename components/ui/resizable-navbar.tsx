@@ -1,4 +1,11 @@
 "use client";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import {
@@ -9,8 +16,7 @@ import {
 } from "motion/react";
 import localFont from "next/font/local";
 import Link from "next/link";
-import React, { useRef, useState } from "react";
-
+import React, { ReactNode, useRef, useState } from "react";
 interface NavbarProps {
   children: React.ReactNode;
   className?: string;
@@ -145,30 +151,56 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         className,
       )}
     >
-      {items.map((item, idx) => (
-        <Link
-          onMouseEnter={() => setHovered(idx)}
-          onClick={onItemClick}
-          className="group relative px-5 py-1"
-          key={`link-${idx}`}
-          href={item.link}
-        >
-          {hovered === idx && (
-            <motion.div
-              layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-lg bg-[#EB2D2E]/60"
-            />
-          )}
-          <span
-            className={cn(
-              "text-muted-foreground group-hover:text-foreground relative z-20 text-lg tracking-widest transition-all duration-300 ease-in-out",
-              magurie.className,
-            )}
+      {items.map((item, idx) =>
+        item.name === "About" ? (
+          <NestedAbout key={`${idx}-{item.link}`}>
+            <button
+              onMouseEnter={() => setHovered(idx)}
+              onClick={onItemClick}
+              className="group relative cursor-pointer px-5 py-1"
+              key={`link-${idx}`}
+            >
+              {hovered === idx && (
+                <motion.div
+                  layoutId="hovered"
+                  className="absolute inset-0 h-full w-full rounded-lg bg-[#EB2D2E]/60"
+                />
+              )}
+              <span
+                className={cn(
+                  "text-muted-foreground group-hover:text-foreground relative z-20 text-lg tracking-widest transition-all duration-300 ease-in-out",
+                  magurie.className,
+                )}
+              >
+                {item.name}
+              </span>
+            </button>
+          </NestedAbout>
+        ) : (
+          <Link
+            onMouseEnter={() => setHovered(idx)}
+            onClick={onItemClick}
+            className="group relative px-5 py-1"
+            key={`link-${idx}`}
+            href={item.link}
           >
-            {item.name}
-          </span>
-        </Link>
-      ))}
+            {hovered === idx && (
+              <motion.div
+                layoutId="hovered"
+                className="absolute inset-0 h-full w-full rounded-lg bg-[#EB2D2E]/60"
+              />
+            )}
+            <span
+              className={cn(
+                "text-muted-foreground group-hover:text-foreground relative z-20 text-lg tracking-widest transition-all duration-300 ease-in-out",
+                magurie.className,
+              )}
+            >
+              {item.name}
+            </span>
+          </Link>
+        ),
+      )}
     </motion.div>
   );
 };
@@ -315,3 +347,29 @@ export const NavbarButton = ({
     children,
   );
 };
+
+const NestedAbout = ({ children }: { children: ReactNode }) => (
+  <DropdownMenu>
+    <DropdownMenuTrigger asChild>{children}</DropdownMenuTrigger>
+    <DropdownMenuContent className="w-56" align="start">
+      <DropdownMenuGroup>
+        <DropdownMenuItem
+          className={cn(
+            "text-muted-foreground group-hover:text-foreground cursor-pointer text-lg tracking-widest",
+            magurie.className,
+          )}
+        >
+          <Link href="/promotor">Promotor</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          className={cn(
+            "text-muted-foreground group-hover:text-foreground cursor-pointer text-lg tracking-widest",
+            magurie.className,
+          )}
+        >
+          <Link href="/about">Event</Link>
+        </DropdownMenuItem>
+      </DropdownMenuGroup>
+    </DropdownMenuContent>
+  </DropdownMenu>
+);
