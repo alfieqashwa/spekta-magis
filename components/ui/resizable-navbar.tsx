@@ -1,4 +1,5 @@
 "use client";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -15,6 +16,7 @@ import {
   useScroll,
 } from "motion/react";
 import localFont from "next/font/local";
+import Image from "next/image";
 import Link from "next/link";
 import React, { ReactNode, useRef, useState } from "react";
 interface NavbarProps {
@@ -147,7 +149,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 md:flex md:space-x-2",
+        "absolute inset-0 ml-20 hidden flex-1 flex-row items-center justify-center space-x-2 md:flex",
         className,
       )}
     >
@@ -157,7 +159,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             <button
               onMouseEnter={() => setHovered(idx)}
               onClick={onItemClick}
-              className="group relative cursor-pointer px-5 py-1"
+              className="group relative cursor-pointer px-4 py-1"
               key={`link-${idx}`}
             >
               {hovered === idx && (
@@ -293,7 +295,14 @@ export const MobileNavToggle = ({
 export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
   return (
     <Link href="/" className="z-50 flex items-center justify-center gap-2">
-      <img src="/logo.png" alt="logo" className="h-8 w-7 object-cover" />
+      <Image
+        src="/logo.png"
+        alt="logo"
+        priority
+        width={50}
+        height={50}
+        className="h-8 w-7 object-cover"
+      />
       <span
         className={cn(
           "bg-gradient-to-br from-rose-600 from-30% via-fuchsia-600 via-50% to-orange-500 to-70% bg-clip-text font-semibold text-transparent",

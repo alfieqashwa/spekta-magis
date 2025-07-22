@@ -36,7 +36,7 @@ export function Compro({ compro }: { compro: { src: string; alt: string }[] }) {
             Promotor
           </h2>
           <p className="mt-5 text-center text-lg text-zinc-500 md:text-xl">
-            Bersama membagun kreativitas & harmoni budaya.
+            Bersama membangun kreativitas & harmoni budaya.
           </p>
         </motion.div>
         <div className="relative mx-auto mt-10 w-full max-w-4xl rounded-[24px] p-2 shadow-sm md:rounded-t-[44px]">
