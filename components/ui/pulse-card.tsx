@@ -172,7 +172,7 @@ export function CardHoverEffect({
           fill
           priority
           sizes="100vw"
-          className="rounded-lg object-cover sepia-50"
+          className="rounded-lg object-cover"
         />
       </div>
 
