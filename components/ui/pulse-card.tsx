@@ -10,7 +10,7 @@ const magurie = localFont({
 });
 export interface CardProps {
   title: string;
-  titleMobile?: string;
+  titleMobile?: string | string[];
   imageUrl: string;
   alt: string;
   className?: string;
@@ -154,14 +154,27 @@ export function CardHoverEffect({
           title === "Project Pop" ? "w-full lg:w-11/12" : "w-full lg:w-10/12",
         )}
       >
-        <h3
-          className={cn(
-            "relative z-20 -rotate-1 bg-gradient-to-r from-amber-500 from-25% to-rose-600 to-75% bg-clip-text pt-6 text-2xl tracking-widest whitespace-nowrap text-transparent lg:hidden",
-            magurie.className,
-          )}
-        >
-          {titleMobile}
-        </h3>
+        {titleMobile ? (
+          <h3
+            className={cn(
+              "relative z-20 flex -rotate-1 flex-col bg-gradient-to-r from-amber-500 from-25% to-rose-600 to-75% bg-clip-text pt-4 text-2xl tracking-widest text-transparent lg:hidden",
+              magurie.className,
+            )}
+          >
+            <span className="whitespace-nowrap">{titleMobile?.[0]}</span>
+            <span>x</span>
+            <span className="whitespace-nowrap">{titleMobile?.[1]}</span>
+          </h3>
+        ) : (
+          <h3
+            className={cn(
+              "relative z-20 -rotate-1 bg-gradient-to-r from-amber-500 from-25% to-rose-600 to-75% bg-clip-text pt-6 text-2xl tracking-widest whitespace-nowrap text-transparent lg:hidden",
+              magurie.className,
+            )}
+          >
+            {title}
+          </h3>
+        )}
         <Image
           src={
             title === "Project Pop"

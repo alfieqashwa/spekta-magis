@@ -10,7 +10,6 @@ export default function LineupPage() {
   const cards = [
     {
       title: "Raisa",
-      titleMobile: "Raisa",
       imageUrl: "/line-up/raisa-bw.jpg",
       alt: "Raisa",
       variant: "rose",
@@ -18,7 +17,7 @@ export default function LineupPage() {
     },
     {
       title: "Rudy x Ferdy",
-      titleMobile: "Rudy x Ferdy",
+      titleMobile: ["Rudy Nugraha", "Ferdy Element"],
       imageUrl: "/line-up/rudy-ferdy-potrait.png",
       alt: "Rudy x Ferdy",
       variant: "rose",
@@ -26,7 +25,6 @@ export default function LineupPage() {
     },
     {
       title: "Project Pop",
-      titleMobile: "Project Pop",
       imageUrl: "/line-up/project-pop-landscape.png",
       alt: "Project Pop",
       variant: "rose",
