@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
+import Link from "next/link";
 import { useState } from "react";
 
 const magurie = localFont({
@@ -68,11 +69,11 @@ export function NavbarSpekta({
           onClose={() => setIsMobileMenuOpen(false)}
         >
           {modifiedItems.map((item, idx) => (
-            <a
-              key={`mobile-link-${idx}`}
+            <Link
               href={item.link}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-muted-foreground relative tracking-widest"
+              className="text-muted-foreground relative w-full rounded-lg border px-4 py-1.5 tracking-widest"
+              key={`mobile-link-${idx}`}
             >
               <span
                 className={cn(
@@ -82,7 +83,7 @@ export function NavbarSpekta({
               >
                 {item.name}
               </span>
-            </a>
+            </Link>
           ))}
         </MobileNavMenu>
       </MobileNav>
