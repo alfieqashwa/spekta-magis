@@ -348,28 +348,36 @@ export const NavbarButton = ({
   );
 };
 
-const NestedAbout = ({ children }: { children: ReactNode }) => (
-  <DropdownMenu>
-    <DropdownMenuTrigger asChild>{children}</DropdownMenuTrigger>
-    <DropdownMenuContent className="w-56" align="start">
-      <DropdownMenuGroup>
-        <DropdownMenuItem
-          className={cn(
-            "text-muted-foreground group-hover:text-foreground cursor-pointer text-lg tracking-widest",
-            magurie.className,
-          )}
-        >
-          <Link href="/promotor">Promotor</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          className={cn(
-            "text-muted-foreground group-hover:text-foreground cursor-pointer text-lg tracking-widest",
-            magurie.className,
-          )}
-        >
-          <Link href="/event">Event</Link>
-        </DropdownMenuItem>
-      </DropdownMenuGroup>
-    </DropdownMenuContent>
-  </DropdownMenu>
-);
+const NestedAbout = ({ children }: { children: ReactNode }) => {
+  const nestedLink = [
+    {
+      name: "Promotor",
+      link: "/promotor",
+    },
+    {
+      name: "Events",
+      link: "/events",
+    },
+  ];
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>{children}</DropdownMenuTrigger>
+      <DropdownMenuContent className="w-56" align="start">
+        <DropdownMenuGroup>
+          {nestedLink.map((item) => (
+            <DropdownMenuItem
+              className={cn(
+                "text-muted-foreground group-hover:text-foreground cursor-pointer text-lg tracking-widest",
+                magurie.className,
+              )}
+              key={item.name}
+            >
+              <Link href={item.link}>{item.name}</Link>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuGroup>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+};
