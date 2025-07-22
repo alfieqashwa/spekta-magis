@@ -19,8 +19,7 @@ export const ParticlesBackground = () => (
       quantity={150}
       ease={8}
       refresh
-      color="#ffffff"
-      // color={"#EB2D2E"}
+      color="#EB2D2E"
     />
     <HeroTitle />
     <CountdownTimer />
