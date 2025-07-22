@@ -163,7 +163,11 @@ export function CardHoverEffect({
           {titleMobile}
         </h3>
         <Image
-          src={imageUrl}
+          src={
+            title === "Project Pop"
+              ? `/line-up/project-pop-potrait.png`
+              : imageUrl
+          }
           alt={alt}
           fill
           priority

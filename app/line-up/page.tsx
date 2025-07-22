@@ -11,7 +11,7 @@ export default function LineupPage() {
     {
       title: "Raisa",
       titleMobile: "Raisa",
-      imageUrl: "/raisa-bw.jpg",
+      imageUrl: "/line-up/raisa-bw.jpg",
       alt: "Raisa",
       variant: "rose",
       showGridLines: true,
@@ -19,7 +19,7 @@ export default function LineupPage() {
     {
       title: "Rudy x Ferdy",
       titleMobile: "Rudy x Ferdy",
-      imageUrl: "/rudy-ferdy.png",
+      imageUrl: "/line-up/rudy-ferdy-potrait.png",
       alt: "Rudy x Ferdy",
       variant: "rose",
       showGridLines: true,
@@ -27,7 +27,7 @@ export default function LineupPage() {
     {
       title: "Project Pop",
       titleMobile: "Project Pop",
-      imageUrl: "/project-pop.png",
+      imageUrl: "/line-up/project-pop-landscape.png",
       alt: "Project Pop",
       variant: "rose",
       showGridLines: true,
