@@ -43,12 +43,12 @@ export function Events() {
             Spektamagis merupakan suatu pertunjukan yang memberikan experience
             yang menyenangkan. Dengan perpaduan berbagai elemen cahaya dan
             teknologi yang menciptakan sesuatu yang spektakuler dan penuh magis,
-            di tambah dengan perpaduan musik dari para musisi Indonesia.
+            ditambah dengan perpaduan musik dari para musisi Indonesia.
           </p>
           <p className="md:text-justify">
-            Memasuki sebuah ruangan di sambut hangat dengan alunan musik yang
-            hidup dan juga pendaran cahaya, suara atmosferik, dan visual yang
-            membawa pengalaman anda ke tingkat yang lebih imersif.
+            Memasuki sebuah ruangan disambut hangat dengan alunan musik yang
+            hidup, pendaran cahaya, suara atmosferik, juga visual yang membawa
+            pengalaman Anda ke tingkat yang lebih imersif.
           </p>
         </article>
       </section>
