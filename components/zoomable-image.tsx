@@ -10,6 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
+import { cn } from "@/lib/utils";
 
 export function ZoomableImage({
   src,
@@ -26,7 +27,7 @@ export function ZoomableImage({
           alt={alt || ""}
           sizes="100vw"
           priority
-          className={className}
+          className={cn("cursor-zoom-in", className)}
           style={{
             width: "100%",
             height: "auto",
@@ -35,7 +36,7 @@ export function ZoomableImage({
           height={300}
         />
       </DialogTrigger>
-      <DialogContent className="z-[151] h-screen max-h-none max-w-none min-w-screen border-0 bg-black p-0">
+      <DialogContent className="z-[151] h-screen max-h-none max-w-none min-w-screen cursor-zoom-out border-0 bg-black p-0">
         <DialogTitle className="sr-only" />
         <DialogDescription className="sr-only" />
         <div className="flex h-full w-full items-center justify-center overflow-hidden bg-black">
