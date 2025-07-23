@@ -369,13 +369,16 @@ const NestedAbout = ({ children }: { children: ReactNode }) => {
     },
   ];
 
+  const [open, setOpen] = useState(false);
+
   return (
-    <DropdownMenu>
+    <DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>{children}</DropdownMenuTrigger>
       <DropdownMenuContent className="w-56" align="start">
         <DropdownMenuGroup>
           {nestedLink.map((item) => (
             <DropdownMenuItem
+              onClick={() => setOpen(false)}
               className={cn(
                 "text-muted-foreground group-hover:text-foreground cursor-pointer text-lg tracking-widest",
                 magurie.className,
