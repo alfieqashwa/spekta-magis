@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 
 export default function PromotorPage() {
-  const compro = [
+  const images = [
     { src: "/compro/1.jpg", alt: "compro-1" },
     { src: "/compro/2.jpg", alt: "compro-2" },
     { src: "/compro/3.jpg", alt: "compro-3" },
@@ -17,5 +17,5 @@ export default function PromotorPage() {
     { src: "/compro/8.jpg", alt: "compro-8" },
     { src: "/compro/9.jpg", alt: "compro-9" },
   ];
-  return <Compro compro={compro} />;
+  return <Compro images={images} />;
 }

@@ -13,7 +13,7 @@ const space = Geist({
   weight: "400",
 });
 
-export function Compro({ compro }: { compro: { src: string; alt: string }[] }) {
+export function Compro({ images }: { images: { src: string; alt: string }[] }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -47,11 +47,11 @@ export function Compro({ compro }: { compro: { src: string; alt: string }[] }) {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.5, delay: 0 }}
             >
-              {compro.map((compro, i) => (
-                <div className="cursor-pointer" key={`${i}-${compro.alt}`}>
+              {images.map((img, i) => (
+                <div className="cursor-pointer" key={`${i}-${img.alt}`}>
                   <ZoomableImage
-                    src={compro.src}
-                    alt={compro.alt}
+                    src={img.src}
+                    alt={img.alt}
                     className="rounded-sm"
                   />
                 </div>

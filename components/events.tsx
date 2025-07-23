@@ -5,6 +5,7 @@ import { motion, useInView } from "motion/react";
 import { Geist } from "next/font/google";
 import { useRef } from "react";
 import { WrapperBackground } from "./wrapper-background";
+import { ZoomableImage } from "./zoomable-image";
 
 const space = Geist({
   subsets: ["latin"],
@@ -12,12 +13,12 @@ const space = Geist({
   weight: "400",
 });
 
-export function Events() {
+export function Events({ images }: { images: { src: string; alt: string }[] }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <WrapperBackground sectionId="events">
+    <WrapperBackground sectionId="about">
       <div className="mx-auto px-2">
         <motion.div
           ref={ref}
@@ -34,24 +35,31 @@ export function Events() {
           >
             Events
           </h2>
+          <p className="mt-5 text-center text-lg text-zinc-500 md:text-xl">
+            Spektamagis - Color of Unity
+          </p>
         </motion.div>
+        <div className="relative mx-auto w-full max-w-4xl rounded-[24px] p-2 py-12 shadow-sm md:rounded-t-[44px]">
+          <section>
+            <motion.div
+              className="grid grid-cols-1 gap-4 md:grid-cols-2"
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.5, delay: 0 }}
+            >
+              {images.map((img, i) => (
+                <div className="cursor-pointer" key={`${i}-${img.alt}`}>
+                  <ZoomableImage
+                    src={img.src}
+                    alt={img.alt}
+                    className="rounded-sm"
+                  />
+                </div>
+              ))}
+            </motion.div>
+          </section>
+        </div>
       </div>
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg sm:px-12">
-        <h1 className="mt-4 text-xl font-semibold">About Spektamagis</h1>
-        <article className="mt-6 space-y-4">
-          <p className="md:text-justify">
-            Spektamagis merupakan suatu pertunjukan yang memberikan experience
-            yang menyenangkan. Dengan perpaduan berbagai elemen cahaya dan
-            teknologi yang menciptakan sesuatu yang spektakuler dan penuh magis,
-            ditambah dengan perpaduan musik dari para musisi Indonesia.
-          </p>
-          <p className="md:text-justify">
-            Memasuki sebuah ruangan disambut hangat dengan alunan musik yang
-            hidup, pendaran cahaya, suara atmosferik, juga visual yang membawa
-            pengalaman Anda ke tingkat yang lebih imersif.
-          </p>
-        </article>
-      </section>
     </WrapperBackground>
   );
 }
