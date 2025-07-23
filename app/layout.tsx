@@ -71,7 +71,7 @@ export default function RootLayout({
     },
     {
       name: "AI",
-      link: "/ai-chat",
+      link: "https://ai.spektamagis.com",
     },
   ];
 
