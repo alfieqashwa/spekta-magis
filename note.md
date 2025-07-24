@@ -45,12 +45,22 @@ Prompt (optimize).
 Waiting Update
 Zoom Image (Optional)
 
-Data
-Text: About Spekta, About Compro
-Images:
-Project Pop (Potrait BW & Landscape)
-Rudy Nugraha X Ferdy Element (Potrait BW Only),
-Wayang Image
-Team images
-
 Data for AI Configuration
+
+[-] Spektamagis di navigation di hapus, sisakan logonya.
+[-] hapus logo animasi sound wave
+[-] Warn background main page bikin lebih mendekati di pitch-deck
+[-] Di Page about events, di take down image Target audience dan Rundown
+[-] ganti Head Title Spektamgis dan Color of Unity dengan image title yg disediakan di folder WEBSITE
+[-] 20 September 2025: text neon
+[-]
+[-] Artist Line Up (page head title)
+[-] Navigation text, UPPERCASE
+[-] Merchandise dibikin grid card (price will be updated soon)
+[-] Merchandise item: Ticket image di hapus, t-shirt di update
+[-] Line up Name: UPPERCASE, neon color
+
+---
+
+FB : spektamagis
+TIKTOK : spektamagis\_
