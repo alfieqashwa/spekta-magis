@@ -1,3 +1,4 @@
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import localFont from "next/font/local";
@@ -101,6 +102,8 @@ export function CardHoverEffect({
 
   const Div = interactive ? motion.div : "div";
 
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+
   return (
     <Div
       whileHover={interactive ? { scale: hoverScale } : undefined}
@@ -151,7 +154,9 @@ export function CardHoverEffect({
       <div
         className={cn(
           "relative h-[40rem] rounded-lg bg-gradient-to-b from-zinc-950/50 to-zinc-950/90 lg:w-10/12",
-          title === "Project Pop" ? "w-full lg:w-11/12" : "w-full lg:w-10/12",
+          title === "Project Pop"
+            ? "h-[34rem] w-full lg:w-11/12"
+            : "w-full lg:w-10/12",
         )}
       >
         {titleMobile ? (
@@ -179,8 +184,8 @@ export function CardHoverEffect({
         )}
         <Image
           src={
-            title === "Project Pop"
-              ? `/line-up/project-pop-potrait.png`
+            title === "Project Pop" && isDesktop
+              ? `/line-up/project-pop-landscape.png`
               : imageUrl
           }
           alt={alt}

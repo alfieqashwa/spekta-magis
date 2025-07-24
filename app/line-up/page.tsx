@@ -25,7 +25,7 @@ export default function LineupPage() {
     },
     {
       title: "Project Pop",
-      imageUrl: "/line-up/project-pop-landscape.png",
+      imageUrl: "/line-up/project-pop-potrait.png",
       alt: "Project Pop",
       variant: "rose",
       showGridLines: true,
