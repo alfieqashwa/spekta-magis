@@ -6,6 +6,8 @@ import { Geist } from "next/font/google";
 import { useRef } from "react";
 import { CardCaroursalMerchandise } from "./card-carousel-merchandise";
 import { WrapperBackground } from "./wrapper-background";
+import Image from "next/image";
+import { ZoomableImage } from "./zoomable-image";
 
 const space = Geist({
   subsets: ["latin"],
@@ -44,7 +46,22 @@ export function Gallery({
           </p>
         </motion.div>
         <div className="relative mx-auto w-full max-w-4xl rounded-[24px] p-2 py-12 shadow-sm md:rounded-t-[44px]">
-          <CardCaroursalMerchandise images={images} />
+          <motion.div
+            className="columns-1 gap-4 space-y-4 md:columns-2"
+            initial={{ opacity: 0, y: 50 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.5, delay: 0 }}
+          >
+            {images.map((img, i) => (
+              <div className="cursor-pointer" key={`${i}-${img.alt}`}>
+                <ZoomableImage
+                  src={img.src}
+                  alt={img.alt}
+                  className="rounded-sm"
+                />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </WrapperBackground>

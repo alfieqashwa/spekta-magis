@@ -57,11 +57,6 @@ interface MobileNavMenuProps {
   onClose: () => void;
 }
 
-const maragsa = localFont({
-  src: "../../public/fonts/Maragsa-Display.woff2",
-  preload: false,
-});
-
 const magurie = localFont({
   src: "../../public/fonts/Magurie.woff2",
   preload: false,
@@ -149,7 +144,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 ml-20 hidden flex-1 flex-row items-center justify-center space-x-2 md:flex",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 pl-8 md:flex",
         className,
       )}
     >
@@ -194,7 +189,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             )}
             <span
               className={cn(
-                "text-foreground relative z-20 text-lg tracking-widest uppercase transition-all duration-150 ease-in-out",
+                "text-foreground relative z-20 text-lg tracking-widest whitespace-nowrap uppercase transition-all duration-150 ease-in-out",
                 magurie.className,
               )}
             >
@@ -292,7 +287,7 @@ export const MobileNavToggle = ({
   );
 };
 
-export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
+export const NavbarLogo = () => {
   return (
     <Link href="/" className="z-50 flex items-center justify-center gap-2">
       <Image
@@ -303,15 +298,6 @@ export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
         height={50}
         className="h-8 w-7 object-cover"
       />
-      {/* <span
-        className={cn(
-          "bg-gradient-to-br from-rose-600 from-30% via-fuchsia-600 via-50% to-orange-500 to-70% bg-clip-text font-semibold text-transparent",
-          maragsa.className,
-          visible ? "text-base tracking-wide" : "text-lg tracking-widest",
-        )}
-      >
-        SpektaMagis
-      </span> */}
     </Link>
   );
 };

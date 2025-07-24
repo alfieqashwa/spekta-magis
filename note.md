@@ -57,11 +57,12 @@ Data for AI Configuration
 
 [x] Navigation text, uppercase, Neon
 [x] 20 September 2025: text neon
-[x] remove artists image
-[x] hapus logo animasi sound wave
-[x] ganti Head Title Spektamgis dan Color of Unity dengan image title yg disediakan di folder WEBSITE
-[-] Merchandise dibikin grid card (price will be updated soon)
-[-] Line Page: description about each artist and link spotify (optional for Rudy).
+[x] Remove artists image
+[x] Hapus logo animasi sound wave
+[x] Ganti Head Title Spektamgis dan Color of Unity dengan image title yg disediakan di folder WEBSITE
+[x] Change Menu AI -> CHAT WITH ME
+[x] Merchandise dibikin grid card (price will be updated soon).
+[-] Line Page: Description about each artist and link spotify (optional for Rudy).
 
 ### Spotify:
 

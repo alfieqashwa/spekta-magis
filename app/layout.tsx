@@ -70,7 +70,7 @@ export default function RootLayout({
       link: "/merchandise",
     },
     {
-      name: "AI",
+      name: "Chat with me",
       link: "https://ai.spektamagis.com",
     },
   ];

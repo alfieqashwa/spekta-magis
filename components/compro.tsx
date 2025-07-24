@@ -40,24 +40,22 @@ export function Compro({ images }: { images: { src: string; alt: string }[] }) {
           </p>
         </motion.div>
         <div className="relative mx-auto w-full max-w-4xl rounded-[24px] p-2 py-12 shadow-sm md:rounded-t-[44px]">
-          <section>
-            <motion.div
-              className="grid grid-cols-1 gap-4 md:grid-cols-2"
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.5, delay: 0 }}
-            >
-              {images.map((img, i) => (
-                <div className="cursor-pointer" key={`${i}-${img.alt}`}>
-                  <ZoomableImage
-                    src={img.src}
-                    alt={img.alt}
-                    className="rounded-sm"
-                  />
-                </div>
-              ))}
-            </motion.div>
-          </section>
+          <motion.div
+            className="grid grid-cols-1 gap-4 md:grid-cols-2"
+            initial={{ opacity: 0, y: 50 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.5, delay: 0 }}
+          >
+            {images.map((img, i) => (
+              <div className="cursor-pointer" key={`${i}-${img.alt}`}>
+                <ZoomableImage
+                  src={img.src}
+                  alt={img.alt}
+                  className="rounded-sm"
+                />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </WrapperBackground>
