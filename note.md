@@ -63,19 +63,6 @@ Data for AI Configuration
 [x] Change Menu AI -> CHAT WITH ME
 [x] Merchandise dibikin grid card (price will be updated soon).
 [x] Background Image
-[-] Line Page: Description about each artist and link spotify (optional for Rudy).
-
-### Spotify:
-
-Raisa: https://open.spotify.com/artist/5OZXWMwDhlYBRvoOfcX0sk
-Project Pop: https://open.spotify.com/artist/2D3ztMHoKJOJs3HgQJPXf6
-Element: https://open.spotify.com/artist/053tL050frPJyo9lPXTUFb
-
-Raisa adalah penyanyi papan atas asal Indonesia yang dikenal dengan suara emas, pesona elegan dan fanbase loyal yang menjadikannya magnet kuat untuk menarik perhatian dan membangun citra premium dengan karya-karyanya.
-
-Project Pop adalah grup musik legendaris dengan energi panggung yang luar biasa, lagu-lagu ikonik yang penuh humor, bermakna, serta kemampuan menghibur lintas generasi yang menjadikan mereka aset berharga untuk menciptakan suasana meriah dan tak terlupakan.
-
-Rudy Nugraha dan Ferdy Element menghadirkan perpaduan vokal kuat dan karisma panggung yang emosional, menciptakan performa penuh nostalgia dan kekuatan musikal yang mampu menghipnotis penonton.
 
 ## Social Media:
 
@@ -90,3 +77,19 @@ text-[#1877F2]
 
 WhatsApp
 text-[#25D366]
+
+## For Izul
+
+[-] Line Page: Description about each artist and link spotify (optional for Rudy).
+
+### Spotify:
+
+Raisa: https://open.spotify.com/artist/5OZXWMwDhlYBRvoOfcX0sk
+Project Pop: https://open.spotify.com/artist/2D3ztMHoKJOJs3HgQJPXf6
+Element: https://open.spotify.com/artist/053tL050frPJyo9lPXTUFb
+
+Raisa adalah penyanyi papan atas asal Indonesia yang dikenal dengan suara emas, pesona elegan dan fanbase loyal yang menjadikannya magnet kuat untuk menarik perhatian dan membangun citra premium dengan karya-karyanya.
+
+Project Pop adalah grup musik legendaris dengan energi panggung yang luar biasa, lagu-lagu ikonik yang penuh humor, bermakna, serta kemampuan menghibur lintas generasi yang menjadikan mereka aset berharga untuk menciptakan suasana meriah dan tak terlupakan.
+
+Rudy Nugraha dan Ferdy Element menghadirkan perpaduan vokal kuat dan karisma panggung yang emosional, menciptakan performa penuh nostalgia dan kekuatan musikal yang mampu menghipnotis penonton.
