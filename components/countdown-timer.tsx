@@ -59,7 +59,7 @@ export default function CountdownTimer() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.7 }}
-        className="border-primary/10 glass mb-2 flex transform-gpu flex-col items-center justify-center rounded-lg border bg-white/5 p-2 text-center font-semibold shadow-lg [box-shadow:0_-20px_80px_-20px_#ff7aa42f_inset] backdrop-blur-md"
+        className="border-primary/10 glass mb-2 flex transform-gpu flex-col items-center justify-center rounded-lg border bg-white/5 p-2 text-center font-semibold uppercase shadow-lg [box-shadow:0_-20px_80px_-20px_#ff7aa42f_inset] backdrop-blur-md"
       >
         <h1 className="text-base md:text-xl">Saturday, 20 September 2025</h1>
         <h1 className="text-foreground text-sm whitespace-nowrap md:text-lg">

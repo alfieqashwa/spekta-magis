@@ -4,9 +4,7 @@ import { cn } from "@/lib/utils";
 import { motion, useInView } from "motion/react";
 import { Geist } from "next/font/google";
 import { useRef } from "react";
-import { CardCaroursalMerchandise } from "./card-carousel-merchandise";
 import { WrapperBackground } from "./wrapper-background";
-import Image from "next/image";
 import { ZoomableImage } from "./zoomable-image";
 
 const space = Geist({

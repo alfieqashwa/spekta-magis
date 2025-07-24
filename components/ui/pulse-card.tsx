@@ -162,7 +162,7 @@ export function CardHoverEffect({
         {titleMobile ? (
           <h3
             className={cn(
-              "from-muted-foreground/55 via-foreground to-muted-foreground/55 relative z-20 flex -rotate-1 flex-col bg-gradient-to-r bg-clip-text pt-4 text-2xl tracking-widest text-transparent uppercase lg:hidden",
+              "from-muted-foreground/55 via-foreground to-muted-foreground/55 relative z-20 flex flex-col bg-gradient-to-r bg-clip-text pt-4 text-2xl tracking-widest text-transparent uppercase lg:hidden",
               magurie.className,
             )}
           >
@@ -175,7 +175,7 @@ export function CardHoverEffect({
         ) : (
           <h3
             className={cn(
-              "from-muted-foreground/55 via-foreground to-muted-foreground/55 relative z-20 -rotate-1 bg-gradient-to-r bg-clip-text pt-6 text-3xl tracking-widest whitespace-nowrap text-transparent uppercase lg:hidden",
+              "from-muted-foreground/55 via-foreground to-muted-foreground/55 relative z-20 bg-gradient-to-r bg-clip-text pt-6 text-3xl tracking-widest whitespace-nowrap text-transparent uppercase lg:hidden",
               magurie.className,
             )}
           >

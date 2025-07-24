@@ -14,7 +14,7 @@ export const HeroTitle = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
   return (
     <div className="absolute top-1/2 mt-12 md:mt-20">
-      <div className="z-[154] flex justify-center">
+      <div className="z-50 hidden justify-center md:flex">
         <Image
           src="/spektamagis-main-title.png"
           width={isDesktop ? 500 : 300}
