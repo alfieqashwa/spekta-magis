@@ -15,6 +15,8 @@ export interface CardProps {
   imageUrl: string;
   alt: string;
   className?: string;
+  description?: string;
+  linkSpotify?: string;
   variant?: "emerald" | "blue" | "purple" | "amber" | "rose";
   size?: "sm" | "md" | "lg";
   glowEffect?: boolean;
@@ -199,6 +201,7 @@ export function CardHoverEffect({
       <h1
         className={cn(
           "absolute rotate-90 font-bold whitespace-nowrap text-rose-500/20 transition-all duration-500 ease-in-out group-hover:text-rose-500/40 lg:text-6xl",
+          "z-0 pointer-events-none select-none",
           title === "Rudy x Ferdy"
             ? "top-60 -right-[10.5rem]"
             : title === "Project Pop"
