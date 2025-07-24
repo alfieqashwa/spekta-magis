@@ -1,9 +1,16 @@
-import { CONTACT, INSTAGRAM } from "@/constants/contact";
-import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { CONTACT, FACEBOOK, INSTAGRAM, TIKTOK } from "@/constants/contact";
+import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 
 export const Footer = () => (
   <footer className="fixed bottom-0 z-[150] h-12 w-full bg-black/70 pt-1">
-    <div className="flex items-center justify-center space-x-3 px-4">
+    <SocialLinks />
+    <Copyright />
+  </footer>
+);
+
+const SocialLinks = () => {
+  return (
+    <div className="flex items-center justify-evenly space-x-3 px-4 md:justify-center">
       <section>
         <a
           href={INSTAGRAM}
@@ -11,11 +18,41 @@ export const Footer = () => (
           rel="noopener noreferrer"
           className="flex items-center space-x-2"
         >
-          <FaInstagram className="animate-pulse-slow size-6 text-[#EB2D2E]" />
-          <span className="text-xs font-medium md:text-sm">Spektamagis</span>
+          <FaInstagram className="size-6 text-[#E4405F]" />
+          <span className="hidden text-sm font-medium md:block">
+            spektamagis
+          </span>
         </a>
       </section>
-      <a className="font-semibold text-gray-300">|</a>
+      <a className="text-muted-foreground hidden font-semibold md:block">|</a>
+      <section>
+        <a
+          href={TIKTOK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-2"
+        >
+          <FaTiktok className="size-6 text-[#EE1D52]" />
+          <span className="hidden text-sm font-medium md:block">
+            @spektamagis_
+          </span>
+        </a>
+      </section>
+      <a className="text-muted-foreground hidden font-semibold md:block">|</a>
+      <section>
+        <a
+          href={FACEBOOK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-2"
+        >
+          <FaFacebook className="size-6 text-[#1877F2]" />
+          <span className="hidden text-sm font-medium md:block">
+            spektamagis
+          </span>
+        </a>
+      </section>
+      <a className="text-muted-foreground hidden font-semibold md:block">|</a>
       <section>
         <a
           href={CONTACT}
@@ -23,16 +60,15 @@ export const Footer = () => (
           rel="noopener noreferrer"
           className="flex items-center space-x-2"
         >
-          <FaWhatsapp className="animate-pulse-slow size-6 text-[#EB2D2E]" />
-          <span className="text-xs font-medium whitespace-nowrap md:text-sm">
+          <FaWhatsapp className="size-6 text-[#25D366]" />
+          <span className="hidden text-sm font-medium md:block">
             0852 85 999 565
           </span>
         </a>
       </section>
     </div>
-    <Copyright />
-  </footer>
-);
+  );
+};
 
 const Copyright = () => (
   <p className="text-muted-foreground my-0.5 text-center font-mono text-xs font-semibold whitespace-nowrap md:text-sm">

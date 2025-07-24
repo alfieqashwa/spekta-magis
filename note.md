@@ -76,3 +76,17 @@ Raisa adalah penyanyi papan atas asal Indonesia yang dikenal dengan suara emas, 
 Project Pop adalah grup musik legendaris dengan energi panggung yang luar biasa, lagu-lagu ikonik yang penuh humor, bermakna, serta kemampuan menghibur lintas generasi yang menjadikan mereka aset berharga untuk menciptakan suasana meriah dan tak terlupakan.
 
 Rudy Nugraha dan Ferdy Element menghadirkan perpaduan vokal kuat dan karisma panggung yang emosional, menciptakan performa penuh nostalgia dan kekuatan musikal yang mampu menghipnotis penonton.
+
+## Social Media:
+
+Instagram
+text-[#E4405F]
+
+TikTok (choose one, or apply multi-color gradient manually)
+text-[#69C9D0] or text-[#EE1D52]
+
+Facebook
+text-[#1877F2]
+
+WhatsApp
+text-[#25D366]
