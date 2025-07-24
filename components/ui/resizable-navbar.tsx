@@ -289,14 +289,14 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
   return (
-    <Link href="/" className="z-50 flex items-center justify-center gap-2">
+    <Link href="/" className="z-50 flex items-center justify-center gap-2 pl-2">
       <Image
         src="/logo.png"
         alt="logo"
         priority
         width={50}
         height={50}
-        className="h-8 w-7 object-cover"
+        className="h-7 w-6 object-cover"
       />
     </Link>
   );
