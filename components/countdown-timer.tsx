@@ -51,7 +51,7 @@ export default function CountdownTimer() {
   return (
     <div
       className={cn(
-        "text-foreground absolute bottom-1/12 rounded-lg p-0 tracking-wide shadow-lg md:bottom-1/6 md:p-6 md:tracking-widest",
+        "text-foreground rounded-lg tracking-wide shadow-lg md:bottom-1/6 md:px-6 md:tracking-widest",
         brico.className,
       )}
     >
@@ -59,7 +59,7 @@ export default function CountdownTimer() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.7 }}
-        className="border-primary/10 glass mb-4 flex transform-gpu flex-col items-center justify-center rounded-lg border bg-white/5 p-4 text-center font-semibold shadow-lg [box-shadow:0_-20px_80px_-20px_#ff7aa42f_inset] backdrop-blur-md"
+        className="border-primary/10 glass mb-2 flex transform-gpu flex-col items-center justify-center rounded-lg border bg-white/5 p-2 text-center font-semibold shadow-lg [box-shadow:0_-20px_80px_-20px_#ff7aa42f_inset] backdrop-blur-md"
       >
         <h1 className="text-base md:text-xl">Saturday, 20 September 2025</h1>
         <h1 className="text-foreground text-sm whitespace-nowrap md:text-lg">
@@ -85,9 +85,11 @@ const CountdownCard = ({
     initial={{ opacity: 0, scale: "70%" }}
     animate={{ opacity: 1, scale: "100%" }}
     transition={{ duration: 1, delay: 0.7 }}
-    className="border-primary/10 glass flex transform-gpu flex-col items-center justify-center rounded-lg border bg-white/5 p-4 shadow-lg [box-shadow:0_-20px_80px_-20px_#ff7aa42f_inset] backdrop-blur-md"
+    className="border-primary/10 glass flex transform-gpu flex-col items-center justify-center rounded-lg border bg-white/5 p-3 shadow-lg [box-shadow:0_-20px_80px_-20px_#ff7aa42f_inset] backdrop-blur-md"
   >
-    <div className="font-mono text-lg text-rose-500 md:text-3xl">{context}</div>
+    <div className="font-mono text-base text-rose-500 md:text-3xl">
+      {context}
+    </div>
     <div className="text-muted-foreground text-xs uppercase md:text-sm">
       {title}
     </div>

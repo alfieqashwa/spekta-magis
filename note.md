@@ -50,19 +50,24 @@ Data for AI Configuration
 [x] Spektamagis di navigation di hapus, sisakan logonya.
 [x] Line up Name: UPPERCASE, neon color
 [x] Di Page about events, di take down image Target audience dan Rundown
-[x] Navigation text, UPPERCASE
 [x] Merchandise item: Ticket image di hapus, t-shirt di update
 [x] Artist Line Up (page head title)
 [x] Artist Name on mobile view (uppercase, neon color)
 [x] Rudy x Ferdy title (updated in one line)
 
-[-] Merchandise dibikin grid card (price will be updated soon)
+[x] Navigation text, uppercase, Neon
+[x] 20 September 2025: text neon
+[x] remove artists image
 [x] hapus logo animasi sound wave
-[-] Warn background main page bikin lebih mendekati di pitch-deck
-[-] ganti Head Title Spektamgis dan Color of Unity dengan image title yg disediakan di folder WEBSITE
-[-] 20 September 2025: text neon
+[x] ganti Head Title Spektamgis dan Color of Unity dengan image title yg disediakan di folder WEBSITE
+[-] Merchandise dibikin grid card (price will be updated soon)
+[-] Line Page: description about each artist and link spotify (optional for Rudy).
 
----
+### Spotify:
+
+Raisa: https://open.spotify.com/artist/5OZXWMwDhlYBRvoOfcX0sk
+Project Pop: https://open.spotify.com/artist/2D3ztMHoKJOJs3HgQJPXf6
+Element: https://open.spotify.com/artist/053tL050frPJyo9lPXTUFb
 
 FB : spektamagis
 TIKTOK : spektamagis\_

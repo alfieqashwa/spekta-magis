@@ -170,7 +170,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               )}
               <span
                 className={cn(
-                  "text-muted-foreground group-hover:text-foreground relative z-20 text-lg tracking-widest uppercase transition-all duration-300 ease-in-out",
+                  "text-foreground relative z-20 text-lg tracking-widest uppercase transition-all duration-150 ease-in-out",
                   magurie.className,
                 )}
               >
@@ -194,7 +194,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             )}
             <span
               className={cn(
-                "text-muted-foreground group-hover:text-foreground relative z-20 text-lg tracking-widest uppercase transition-all duration-300 ease-in-out",
+                "text-foreground relative z-20 text-lg tracking-widest uppercase transition-all duration-150 ease-in-out",
                 magurie.className,
               )}
             >

@@ -72,7 +72,7 @@ export function NavbarSpekta({
             <Link
               href={item.link}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-muted-foreground relative w-full rounded-lg border px-4 py-1.5 tracking-widest"
+              className="text-foreground relative w-full rounded-lg border px-4 py-1.5 tracking-widest"
               key={`mobile-link-${idx}`}
             >
               <span
