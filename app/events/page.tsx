@@ -14,8 +14,6 @@ export default function EventsPage() {
     { src: "/events/6.png", alt: "event-6" },
     { src: "/events/7.png", alt: "event-7" },
     { src: "/events/8.png", alt: "event-8" },
-    { src: "/events/9.png", alt: "event-9" },
-    { src: "/events/10.png", alt: "event-10" },
   ];
 
   return <Events images={images} />;

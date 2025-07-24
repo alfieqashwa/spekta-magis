@@ -77,7 +77,7 @@ export function NavbarSpekta({
             >
               <span
                 className={cn(
-                  "block text-lg tracking-widest",
+                  "block text-lg tracking-widest uppercase",
                   magurie.className,
                 )}
               >

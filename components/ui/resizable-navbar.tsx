@@ -170,7 +170,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               )}
               <span
                 className={cn(
-                  "text-muted-foreground group-hover:text-foreground relative z-20 text-lg tracking-widest transition-all duration-300 ease-in-out",
+                  "text-muted-foreground group-hover:text-foreground relative z-20 text-lg tracking-widest uppercase transition-all duration-300 ease-in-out",
                   magurie.className,
                 )}
               >
@@ -194,7 +194,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             )}
             <span
               className={cn(
-                "text-muted-foreground group-hover:text-foreground relative z-20 text-lg tracking-widest transition-all duration-300 ease-in-out",
+                "text-muted-foreground group-hover:text-foreground relative z-20 text-lg tracking-widest uppercase transition-all duration-300 ease-in-out",
                 magurie.className,
               )}
             >
@@ -303,7 +303,7 @@ export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
         height={50}
         className="h-8 w-7 object-cover"
       />
-      <span
+      {/* <span
         className={cn(
           "bg-gradient-to-br from-rose-600 from-30% via-fuchsia-600 via-50% to-orange-500 to-70% bg-clip-text font-semibold text-transparent",
           maragsa.className,
@@ -311,7 +311,7 @@ export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
         )}
       >
         SpektaMagis
-      </span>
+      </span> */}
     </Link>
   );
 };

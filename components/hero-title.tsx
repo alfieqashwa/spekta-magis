@@ -3,7 +3,6 @@
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import localFont from "next/font/local";
-import RippleWaveLoader from "./ui/ripplewave-loader";
 
 const maragsa = localFont({
   src: "../public/fonts/Maragsa-Display.woff2",
@@ -35,6 +34,5 @@ export const HeroTitle = () => (
     >
       Color Of Unity
     </motion.p>
-    <RippleWaveLoader />
   </div>
 );

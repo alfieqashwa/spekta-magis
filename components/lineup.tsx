@@ -37,7 +37,7 @@ export function LineUp(props: LineUpProps) {
               space.className,
             )}
           >
-            Artists Lineup
+            Artists Line Up
           </h2>
           <p className="mt-5 text-center text-lg text-zinc-500 md:text-xl">
             Every Beat Has a Name <br className="md:hidden" /> — Meet the
