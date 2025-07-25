@@ -1,6 +1,6 @@
 import { AllArtists } from "@/components/all-artists";
+import { HeroTitle } from "@/components/hero-title";
 import { ParaKreator } from "@/components/para-kreator";
-import { ParticlesBackground } from "@/components/particles-background";
 import { type Metadata } from "next";
 import Image from "next/image";
 
@@ -29,7 +29,7 @@ export default function Home() {
         <AllArtists width={newWidth} height={newHeight} />
       </div>
       <ParaKreator />
-      <ParticlesBackground />
+      <HeroTitle />
     </div>
   );
 }

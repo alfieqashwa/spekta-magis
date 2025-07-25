@@ -1,30 +1,45 @@
 "use client";
 
-import { useMediaQuery } from "@/hooks/use-media-query";
-import localFont from "next/font/local";
 import Image from "next/image";
 import CountdownTimer from "./countdown-timer";
+import { motion } from "motion/react";
 
-const maragsa = localFont({
-  src: "../public/fonts/Maragsa-Display.woff2",
-  preload: false,
-});
+export function HeroTitle() {
+  const titleImageVariant = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    transition: { duration: 1, delay: 2 },
+  };
 
-export const HeroTitle = () => {
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const MotionTitleImage = motion.create(Image);
+
   return (
-    <div className="absolute top-1/2 mt-12 md:mt-20">
-      <div className="z-50 hidden justify-center md:flex">
-        <Image
+    <main className="relative flex min-h-screen w-full items-center justify-center overflow-hidden xl:h-screen">
+      <div className="absolute top-1/2 mt-12 md:mt-20">
+        <div className="z-50 hidden justify-center md:flex">
+          <MotionTitleImage
+            {...titleImageVariant}
+            src="/spektamagis-main-title.png"
+            width={500}
+            height={500}
+            priority
+            alt="Desktop Title"
+            className="h-auto w-auto object-contain"
+          />
+        </div>
+        <CountdownTimer />
+      </div>
+      <div className="absolute top-24 z-50 flex justify-center md:hidden">
+        <MotionTitleImage
+          {...titleImageVariant}
           src="/spektamagis-main-title.png"
-          width={isDesktop ? 500 : 300}
-          height={isDesktop ? 500 : 300}
+          width={300}
+          height={300}
           priority
-          alt="Main Title"
-          className="object-contain"
+          alt="Mobile Title"
+          className="h-auto w-auto object-contain"
         />
       </div>
-      <CountdownTimer />
-    </div>
+    </main>
   );
-};
+}
