@@ -51,7 +51,7 @@ export default function CountdownTimer() {
   return (
     <div
       className={cn(
-        "text-foreground rounded-lg tracking-wide shadow-lg md:bottom-1/6 md:px-6 md:tracking-widest",
+        "text-foreground mt-16 rounded-lg tracking-wide shadow-lg md:bottom-1/6 md:mt-0 md:px-6 md:tracking-widest",
         brico.className,
       )}
     >
