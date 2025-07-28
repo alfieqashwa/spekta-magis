@@ -7,6 +7,7 @@ export const metadata: Metadata = {
 
 export default function EventsPage() {
   const images = [
+    { src: "/events/1.png", alt: "event-1" },
     { src: "/events/2.png", alt: "event-2" },
     { src: "/events/3.png", alt: "event-3" },
     { src: "/events/4.png", alt: "event-4" },
