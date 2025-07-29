@@ -16,10 +16,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
-  ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-  : "http://localhost:3000";
-
 export const metadata: Metadata = {
   title: {
     template: "%s | SpektaMagis: Color of Unity",
