@@ -5,32 +5,7 @@ import { type Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Home | SpektaMagis: Color of Unity",
-  description:
-    "Spektamagis merupakan suatu pertunjukkan yang memberikan experience yang menyenangkan. Dengan perpaduan berbagai elemen cahaya dan teknologi yang menciptakan sesuatu yang spektakuler dan penuh magis, ditambah dengan perpaduan musik dari para musisi Indonesia.",
-  openGraph: {
-    title: "Home - SpektaMagis: Color of Unity",
-    description:
-      "Spektamagis merupakan suatu pertunjukkan yang memberikan experience yang menyenangkan...",
-    url: "https://www.spektamagis.com/",
-    siteName: "SpektaMagis",
-    images: [
-      {
-        url: "https://www.spektamagis.com/events/1.png",
-        width: 1200,
-        height: 630,
-        alt: "Spektamagis Thumbnail",
-      },
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Home - SpektaMagis: Color of Unity",
-    description:
-      "Spektamagis merupakan suatu pertunjukkan yang memberikan experience yang menyenangkan...",
-    images: ["https://www.spektamagis.com/events/1.png"],
-  },
+  title: "Home",
 };
 
 export default function Home() {

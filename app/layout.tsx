@@ -16,10 +16,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
+  ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+  : "http://localhost:3000";
+
 export const metadata: Metadata = {
   title: {
-    template: "%s | SpektaMagis",
-    default: "SpektaMagis",
+    template: "%s | SpektaMagis: Color of Unity",
+    default: "SpektaMagis: Color of Unity",
   },
   robots: {
     index: true,
@@ -33,7 +37,7 @@ export const metadata: Metadata = {
     },
   },
   description:
-    "A spectacular performance where light, technology, and music come together to craft moments of wonder and delight.",
+    "Spektamagis merupakan suatu pertunjukkan yang memberikan experience yang menyenangkan. Dengan perpaduan berbagai elemen cahaya dan teknologi yang menciptakan sesuatu yang spektakuler dan penuh magis, ditambah dengan perpaduan musik dari para musisi Indonesia.",
   icons: [
     {
       rel: "icon",
@@ -41,6 +45,22 @@ export const metadata: Metadata = {
       type: "image/x-icon",
     },
   ],
+  openGraph: {
+    title: "Home - SpektaMagis: Color of Unity",
+    description:
+      "Spektamagis merupakan suatu pertunjukkan yang memberikan experience yang menyenangkan...",
+    url: "https://www.spektamagis.com/",
+    siteName: "SpektaMagis",
+    images: [
+      {
+        url: "https://www.spektamagis.com/events/1.png",
+        width: 1200,
+        height: 630,
+        alt: "Spektamagis Thumbnail",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
