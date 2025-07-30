@@ -173,6 +173,31 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               </span>
             </button>
           </NestedAbout>
+        ) : item.name === "Get Ticket" ? (
+          <a
+            onMouseEnter={() => setHovered(idx)}
+            onClick={onItemClick}
+            className="group relative px-5 py-1"
+            key={`link-${idx}`}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {hovered === idx && (
+              <motion.div
+                layoutId="hovered"
+                className="absolute inset-0 h-full w-full rounded-lg bg-[#EB2D2E]/60"
+              />
+            )}
+            <span
+              className={cn(
+                "text-foreground relative z-20 text-lg tracking-widest whitespace-nowrap uppercase transition-all duration-150 ease-in-out",
+                magurie.className,
+              )}
+            >
+              {item.name}
+            </span>
+          </a>
         ) : (
           <Link
             onMouseEnter={() => setHovered(idx)}

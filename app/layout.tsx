@@ -79,11 +79,11 @@ export default function RootLayout({
     },
     {
       name: "Get Ticket",
-      link: "/",
+      link: "https://www.yesplis.com/event/spektamagis",
     },
     {
       name: "Merchandise",
-      link: "https://www.yesplis.com/event/spektamagis",
+      link: "/merchandise",
     },
     {
       name: "Chat with me",
