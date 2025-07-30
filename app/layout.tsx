@@ -21,26 +21,17 @@ export const metadata: Metadata = {
     template: "%s | SpektaMagis: Color of Unity",
     default: "SpektaMagis: Color of Unity",
   },
+  description:
+    "Spektamagis merupakan suatu pertunjukkan yang memberikan experience yang menyenangkan. Dengan perpaduan berbagai elemen cahaya dan teknologi yang menciptakan sesuatu yang spektakuler dan penuh magis, ditambah dengan perpaduan musik dari para musisi Indonesia.",
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+    googleBot: { index: true, follow: true },
   },
-  description:
-    "Spektamagis merupakan suatu pertunjukkan yang memberikan experience yang menyenangkan. Dengan perpaduan berbagai elemen cahaya dan teknologi yang menciptakan sesuatu yang spektakuler dan penuh magis, ditambah dengan perpaduan musik dari para musisi Indonesia.",
-  icons: [
-    {
-      rel: "icon",
-      url: "/logo.png",
-      type: "image/x-icon",
-    },
-  ],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
   openGraph: {
     title: "Home - SpektaMagis: Color of Unity",
     description:
@@ -64,6 +55,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "SpektaMagis",
+    url: "https://www.spektamagis.com",
+    logo: "https://www.spektamagis.com/logo.png",
+  };
+
   const navItems = [
     {
       name: "Home",
@@ -93,6 +92,13 @@ export default function RootLayout({
 
   return (
     <html lang="en" data-scroll-behavior="smooth" className="dark">
+      <head>
+        <script
+          key="ld‑json"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body
         className={`${geistSans.className} ${geistMono.className} antialiased`}
       >
