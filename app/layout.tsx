@@ -83,7 +83,7 @@ export default function RootLayout({
     },
     {
       name: "Merchandise",
-      link: "/merchandise",
+      link: "https://www.yesplis.com/event/spektamagis",
     },
     {
       name: "Chat with me",
