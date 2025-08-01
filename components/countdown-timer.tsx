@@ -6,9 +6,15 @@ import { useEffect, useState } from "react";
 import Countdown, { CountdownRendererFn } from "react-countdown";
 import { Bricolage_Grotesque } from "next/font/google";
 import { cn } from "@/lib/utils";
+import localFont from "next/font/local";
 
 const brico = Bricolage_Grotesque({
   subsets: ["latin"],
+});
+
+const magurie = localFont({
+  src: "../public/fonts/Magurie.woff2",
+  preload: false,
 });
 
 const targetDate = new Date("2025-09-20T09:00:00Z"); // UTC time of 16:00 in GMT+7
@@ -55,6 +61,24 @@ export default function CountdownTimer() {
         brico.className,
       )}
     >
+      <motion.div
+        initial={{ opacity: 0, scale: "50%" }}
+        animate={{ opacity: 1, scale: "100%" }}
+        transition={{ duration: 1, delay: 0.9 }}
+        className="text-foreground mx-auto mb-1 flex w-1/3 justify-center rounded-md bg-gradient-to-t from-amber-600 to-amber-300 py-1 shadow-lg transition-colors duration-300 ease-in-out hover:to-amber-400 md:py-1.5"
+      >
+        <a
+          href="https://www.yesplis.com/event/spektamagis"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cn(
+            "text-base tracking-widest whitespace-nowrap uppercase md:text-2xl",
+            magurie.className,
+          )}
+        >
+          Get Ticket
+        </a>
+      </motion.div>
       <motion.article
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

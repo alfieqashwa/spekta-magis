@@ -16,6 +16,7 @@ export function HeroTitle() {
   return (
     <main className="relative flex min-h-screen w-full items-center justify-center overflow-hidden xl:h-screen">
       <div className="absolute top-1/2 mt-12 md:mt-20">
+        {/* Desktop view */}
         <div className="z-50 hidden justify-center md:flex">
           <MotionTitleImage
             {...titleImageVariant}
@@ -29,6 +30,7 @@ export function HeroTitle() {
         </div>
         <CountdownTimer />
       </div>
+      {/* Mobile view */}
       <div className="absolute top-24 z-50 flex justify-center md:hidden">
         <MotionTitleImage
           {...titleImageVariant}
