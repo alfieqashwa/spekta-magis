@@ -53,7 +53,7 @@ export function LineUp(props: LineUpProps) {
               transition={{ duration: 1, delay: 1.25 }}
               key={`${i}-${card.title}`}
               className={cn(
-                "rounded-xl bg-rose-500/10 p-4 flex flex-col justify-start h-full text-left",
+                "flex h-full flex-col justify-start rounded-xl bg-rose-500/10 p-4 text-left",
                 card.title === "Project Pop"
                   ? "md:col-start-1 md:col-end-7"
                   : "md:col-span-3",
@@ -73,25 +73,51 @@ export function LineUp(props: LineUpProps) {
               </div>
 
               {/* Description + Spotify */}
-              <div className="relative z-10 flex flex-col justify-between flex-grow mt-4">
+              <div className="relative z-10 mt-4 flex flex-grow flex-col justify-between">
                 {/* Description */}
                 {card.description && (
-                  <p className="text-sm text-zinc-700 dark:text-zinc-300 mb-4">
+                  <p className="mb-4 text-sm text-zinc-700 dark:text-zinc-300">
                     {card.description}
                   </p>
                 )}
 
                 {/* Spotify Button */}
-                {card.linkSpotify && (
+                {card.linkSpotify && card.linkSpotify.length > 1 ? (
+                  // Rudy x Ferdy Only
+                  <div className="flex items-center justify-between gap-4">
+                    <div className="mt-auto pt-2">
+                      <a
+                        href={card?.linkSpotify?.[0]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 rounded-md bg-green-500 px-4 py-2 text-sm font-medium text-white transition-all hover:scale-105 hover:bg-green-600"
+                      >
+                        <FaSpotify className="text-lg text-white" />
+                        Spotify
+                      </a>
+                    </div>
+                    <div className="mt-auto pt-2">
+                      <a
+                        href={card?.linkSpotify?.[1]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 rounded-md bg-green-500 px-4 py-2 text-sm font-medium whitespace-nowrap text-white transition-all hover:scale-105 hover:bg-green-600"
+                      >
+                        <FaSpotify className="text-lg text-white" />
+                        Spotify
+                      </a>
+                    </div>
+                  </div>
+                ) : (
                   <div className="mt-auto pt-2">
                     <a
-                      href={card.linkSpotify}
+                      href={card?.linkSpotify?.[0]}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-md bg-green-500 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-green-600 hover:scale-105"
+                      className="inline-flex items-center justify-center gap-2 rounded-md bg-green-500 px-4 py-2 text-sm font-medium whitespace-nowrap text-white transition-all hover:scale-105 hover:bg-green-600"
                     >
-                      <FaSpotify className="text-white text-lg" />
-                      Listen on Spotify
+                      <FaSpotify className="text-lg text-white" />
+                      Spotify
                     </a>
                   </div>
                 )}
