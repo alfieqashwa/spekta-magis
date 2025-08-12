@@ -16,7 +16,7 @@ export const AllArtists = () => {
     <div className="relative flex h-full items-center justify-center">
       <motion.video
         {...variable}
-        src="/opening-raisa.mp4"
+        src="/opening-raisa.MP4"
         autoPlay
         loop
         playsInline
