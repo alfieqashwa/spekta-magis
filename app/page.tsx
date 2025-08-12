@@ -9,12 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const ORIGINAL_WIDTH = 5781;
-  const ORIGINAL_HEIGHT = 4621;
-
-  const newWidth = 1024;
-  const newHeight = Math.round((ORIGINAL_HEIGHT / ORIGINAL_WIDTH) * newWidth);
-
   return (
     <div className="relative min-h-screen w-full">
       {/* Background Image */}
@@ -25,9 +19,12 @@ export default function Home() {
         priority
         className="z-0 object-cover"
       />
+
+      {/* Video All Artists */}
       <div className="absolute inset-0 m-0 md:m-20">
-        <AllArtists width={newWidth} height={newHeight} />
+        <AllArtists />
       </div>
+
       <ParaKreator />
       <HeroTitle />
     </div>
