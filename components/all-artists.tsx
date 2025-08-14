@@ -2,21 +2,26 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
+import { FaVolumeUp, FaVolumeMute } from "react-icons/fa";
 
 export const AllArtists = () => {
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const enableSound = () => {
+    const toggleSound = () => {
       if (videoRef.current) {
-        videoRef.current.muted = false;
-        setIsMuted(false);
+        videoRef.current.muted = !videoRef.current.muted;
+        setIsMuted(videoRef.current.muted);
       }
-      document.removeEventListener("click", enableSound);
     };
-    document.addEventListener("click", enableSound);
-    return () => document.removeEventListener("click", enableSound);
+
+    // Toggle suara saat user klik dimanapun
+    document.addEventListener("click", toggleSound);
+
+    return () => {
+      document.removeEventListener("click", toggleSound);
+    };
   }, []);
 
   const variable = {
@@ -40,15 +45,16 @@ export const AllArtists = () => {
 
       {/* Tombol mute/unmute */}
       <button
-        onClick={() => {
+        onClick={(e) => {
+          e.stopPropagation(); // Supaya klik tombol tidak trigger event di document
           if (videoRef.current) {
             videoRef.current.muted = !isMuted;
             setIsMuted(!isMuted);
           }
         }}
-        className="fixed bottom-6 right-6 z-[9999] flex h-12 w-12 items-center justify-center rounded-full bg-black/50 text-lg text-white shadow-lg backdrop-blur-sm transition hover:bg-black/70"
+        className="fixed bottom-6 right-6 z-[9999] flex h-12 w-12 items-center justify-center rounded-full bg-black/50 text-xl text-white shadow-lg backdrop-blur-sm transition hover:bg-black/70"
       >
-        {isMuted ? "🔊" : "🔇"}
+        {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
       </button>
     </div>
   );
